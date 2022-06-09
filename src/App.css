@@ -462,78 +462,7 @@
 .realisationSecondRow {
   margin-top: -110px;
 }
-
 /* Réalisation end */
-
-
-
-/* ********************* FOR THE FIRST VERSION OF REALISATION  ********************************** */
-/* .realisationRow {
-  padding: 20px;
-}
-
-.realisatoin {
-  transition: 0.8s;
-}
-
-.realisatoin:hover {
-  transform: scale(1.1);
-  transform: rotateY(90deg);
-  transform: rotateZ(5deg);
-}
-
-#realisationTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  min-height: 70px;
-  margin-top: 30px;
-}
-
-.arrow {
-  display: flex;
-  margin: 0 auto 30px;
-}
-
-.arrow span {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-bottom: 5px solid var(--red);
-  border-right: 5px solid var(--red);
-  transform: rotate(-45deg);
-  margin: -2px;
-}
-
-.arrow:hover span {
-  animation: animate 1s forwards;
-  transition: 1s;
-}
-
-.arrow span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.arrow span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes animate {
-  0% {
-      opacity: 1;
-      transform: rotate(-45deg) translate(0, 0);
-  }
-  
-  50% {
-      opacity: 0;
-      transform: rotate(-45deg) translate(0, 0);
-  }
-
-  100% {
-      opacity: 1;
-      transform: rotate(-45deg) translate(10px, 10px);
-  }
-} */
-
 
 /* Contact start */
 #contactSection {
