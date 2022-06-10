@@ -389,6 +389,7 @@
   background-color: var(--lightGray);
   height: 600px;
   padding: 20px;
+  /* border: solid 13px var(--midGray); */
 }
 
 .graySection2 {
@@ -431,6 +432,32 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/* 
+.realisationTest1 {
+  animation: animatioinTest 500ms forwards;
+  margin: 0 auto 0 60px;
+}
+
+.realisationTest2 {
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 264px;
+}
+
+@keyframes animatioinTest {
+  0% {
+    margin-top: -350px;
+  }
+  100% {
+    margin: 0 auto 0 60px;
+  }
+} */
 
 .realisationText {
   font-family: 'Quicksand', sans-serif;
@@ -451,9 +478,9 @@
 }
 
 .realisation:hover .realisationText {
-  /* margin-top: -350px;
-  transition: 1s; */
-  animation: textSlideUp 1000ms forwards;
+  margin-top: -350px;
+  transition: 1s;
+  /* animation: textSlideUp 1000ms forwards; */
 }
 
 @keyframes textSlideUp {
@@ -491,16 +518,27 @@ text-align: center !important;
 }
 
 .dialogDescription {
-  width: 65%;
-  margin: 40px auto;
+  width: 80%;
+  margin: 20px auto;
   font-size: 1.3rem;
   font-family: 'Quicksand', sans-serif;
 }
 
+iframe {
+  /* max-height: 350px; */
+}
+
 .dialogTitle {
   width: fit-content;
+  margin: 20px auto;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.dialogSubtitle {
+  text-align: center;
+  border-top: solid 1px var(--midGray);
+  font-family: 'Quicksand', sans-serif;
   margin: 20px auto 40px;
-  font-family: 'Paytone One', sans-serif;  ;
 }
 
 .css-i4bv87-MuiSvgIcon-root {

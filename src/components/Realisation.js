@@ -17,6 +17,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
+
 export default function Realisation() {
     AOS.init();
 
@@ -29,6 +30,37 @@ export default function Realisation() {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const RealisationComp = (props) => {
+        return (
+            <>
+                <div>
+                    <img className='realisationImage' src={props.image}></img>
+                </div>
+                <div className='realisationText'>
+                    <button onClick={handleClickOpen} className='btn btn-danger visionerBtn'>
+                        Visioner
+                    </button>
+                    <div>{props.description}</div>
+                </div>
+            </>
+        )
+    }
+
+    const link = <iframe src="https://player.vimeo.com/video/294021357?h=13d87d8029&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
+
+    const DialogComp = (props) => {
+        return (
+            <div className='container dialogWrapper'>
+                <h1 className='dialogTitle'>{props.dialogTitle}</h1>
+                <div className='dialogSubtitle'>{props.dialogSub}</div>
+                <div className='clipPlayerSite'>
+                    {props.videoLink}
+                </div>
+                <div className='dialogDescription'>{props.dialogDescription}</div>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -45,21 +77,10 @@ export default function Realisation() {
                                 <div className='realisation realisation1'
                                     data-aos='zoom-in'
                                     data-aos-duration='1200'
-                                    data-aos-delay='200'
                                     data-aos-once="true"
-                                    data-aos-anchor='.realisation2'
+                                    data-aos-anchor=".realisation2"
                                 >
-                                    <div>
-                                        <img className='realisationImage' src={Test1}></img>
-                                    </div>
-                                    <div className='realisationText'>
-                                        <button onClick={handleClickOpen} className='btn btn-danger visionerBtn'>
-                                            Visioner
-                                        </button>
-                                        <div>
-                                            Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                                        </div>
-                                    </div>
+                                    <RealisationComp image={Test1} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
                                 </div>
                             </div>
                             <div className='col-xl-6'>
@@ -70,20 +91,10 @@ export default function Realisation() {
                                 <div className='realisation realisation2'
                                     data-aos='zoom-in'
                                     data-aos-duration='1200'
-                                    data-aos-delay='400'
                                     data-aos-once="true"
+                                    data-aos-delay="200"
                                 >
-                                    <div>
-                                        <img className='realisationImage' src={Test2}></img>
-                                    </div>
-                                    <div className='realisationText'>
-                                        <div className='btn btn-danger visionerBtn'>
-                                            Visioner
-                                        </div>
-                                        <div>
-                                            Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                                        </div>
-                                    </div>
+                                    <RealisationComp image={Test2} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
                                 </div>
                             </div>
                             <div className='col-xl-6'>
@@ -110,38 +121,17 @@ export default function Realisation() {
                                     data-aos-once="true"
                                     data-aos-anchor='.realisation4'
                                 >
-                                    <div>
-                                        <img className='realisationImage' src={Test3}></img>
-                                    </div>
-                                    <div className='realisationText'>
-                                        <div className='btn btn-danger visionerBtn'>
-                                            Visioner
-                                        </div>
-                                        <div>
-                                            Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                                        </div>
-                                    </div>
+                                    <RealisationComp image={Test3} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
                                 </div>
                             </div>
                             <div className='col-xl-6'>
                                 <div className='realisation realisation4'
                                     data-aos='zoom-in'
                                     data-aos-duration='1200'
-                                    // data-aos-delay='600'
                                     data-aos-once="true"
                                     data-aos-anchor='.realisation5'
                                 >
-                                    <div>
-                                        <img className='realisationImage' src={Test4}></img>
-                                    </div>
-                                    <div className='realisationText'>
-                                        <div className='btn btn-danger visionerBtn'>
-                                            Visioner
-                                        </div>
-                                        <div>
-                                            Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                                        </div>
-                                    </div>
+                                    <RealisationComp image={Test4} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
                                 </div>
                             </div>
                         </div>
@@ -154,17 +144,7 @@ export default function Realisation() {
                                     data-aos-once="true"
                                     data-aos-anchor='.realisation6'
                                 >
-                                    <div>
-                                        <img className='realisationImage' src={Test5}></img>
-                                    </div>
-                                    <div className='realisationText'>
-                                        <div className='btn btn-danger visionerBtn'>
-                                            Visioner
-                                        </div>
-                                        <div>
-                                            Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                                        </div>
-                                    </div>
+                                    <RealisationComp image={Test5} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
                                 </div>
                             </div>
                             <div className='col-xl-6'>
@@ -174,17 +154,7 @@ export default function Realisation() {
                                     data-aos-delay='900'
                                     data-aos-once="true"
                                 >
-                                    <div>
-                                        <img className='realisationImage' src={Test6}></img>
-                                    </div>
-                                    <div className='realisationText'>
-                                        <div className='btn btn-danger visionerBtn'>
-                                            Visioner
-                                        </div>
-                                        <div>
-                                            Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                                        </div>
-                                    </div>
+                                    <RealisationComp image={Test6} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
                                 </div>
                             </div>
                         </div>
@@ -195,7 +165,7 @@ export default function Realisation() {
             </div>
 
             <Dialog
-                fullScreen
+                // fullScreen
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}
@@ -210,16 +180,7 @@ export default function Realisation() {
                         <CloseIcon />
                     </IconButton>
                 </Toolbar>
-
-                <div className='container dialogWrapper'>
-                    <h1 className='dialogTitle'>Visioner</h1>
-                    <div className='clipPlayerSite'>
-                        <iframe src="https://player.vimeo.com/video/490936433?h=dd217e9b28&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="94 Park Street_Apt 3_Portland-Maine |"></iframe>
-                    </div>
-                    <div className='dialogDescription'>
-                        Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
-                    </div>
-                </div>
+                <DialogComp dialogTitle="Desjardins" dialogSub='Une courte vidéo pour Desjardin' videoLink={link} dialogDescription="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !"/>
             </Dialog>
         </>
     )
