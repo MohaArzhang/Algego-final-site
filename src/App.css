@@ -451,8 +451,18 @@
 }
 
 .realisation:hover .realisationText {
-  margin-top: -350px;
-  transition: 1s;
+  /* margin-top: -350px;
+  transition: 1s; */
+  animation: textSlideUp 1000ms forwards;
+}
+
+@keyframes textSlideUp {
+  0% {
+    margin: 0 auto 0 60px;
+  }
+  100% {
+    margin-top: -350px;
+  }
 }
 
 .visionerBtn {
@@ -461,6 +471,46 @@
 
 .realisationSecondRow {
   margin-top: -110px;
+}
+
+.dialogWrapper {
+  /* background-color: var(--lightGray); */
+  background-color: var(--blueLight);
+  height: 100vh;
+}
+
+.css-10ghrmp-MuiPaper-root-MuiAppBar-root {
+background-color: white !important;
+color: black !important;
+text-align: center !important;
+}
+
+.clipPlayerSite {
+  display: flex;
+  justify-content: center;
+}
+
+.dialogDescription {
+  width: 65%;
+  margin: 40px auto;
+  font-size: 1.3rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.dialogTitle {
+  width: fit-content;
+  margin: 20px auto 40px;
+  font-family: 'Paytone One', sans-serif;  ;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  z-index: 1;
+}
+
+.css-8je8zh-MuiTouchRipple-root {
+  z-index: 0;
+  border-radius: 50%;
+  background-color: var(--lightGray);
 }
 /* Réalisation end */
 
@@ -494,6 +544,7 @@
   font-size: 3rem;
   font-weight: bold;
 }
+/* Contact end */
 
 /* Carousel start */
 #carouselContainer {

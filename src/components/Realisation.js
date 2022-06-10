@@ -7,10 +7,29 @@ import Test5 from '../images/test-5.png'
 import Test6 from '../images/test-6.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Slide from '@mui/material/Slide';
+import Dialog from '@mui/material/Dialog'
+import { IconButton, Toolbar } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close';
 
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function Realisation() {
     AOS.init();
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <>
             <div className='container'>
@@ -34,9 +53,9 @@ export default function Realisation() {
                                         <img className='realisationImage' src={Test1}></img>
                                     </div>
                                     <div className='realisationText'>
-                                        <div className='btn btn-danger visionerBtn'>
+                                        <button onClick={handleClickOpen} className='btn btn-danger visionerBtn'>
                                             Visioner
-                                        </div>
+                                        </button>
                                         <div>
                                             Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
                                         </div>
@@ -174,6 +193,34 @@ export default function Realisation() {
                     </div>
                 </div>
             </div>
+
+            <Dialog
+                fullScreen
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+                transitionDuration={800}
+            >
+                <Toolbar>
+                    <IconButton
+                        edge="start"
+                        color="inherit"
+                        onClick={handleClose}
+                        aria-label="close">
+                        <CloseIcon />
+                    </IconButton>
+                </Toolbar>
+
+                <div className='container dialogWrapper'>
+                    <h1 className='dialogTitle'>Visioner</h1>
+                    <div className='clipPlayerSite'>
+                        <iframe src="https://player.vimeo.com/video/490936433?h=dd217e9b28&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="94 Park Street_Apt 3_Portland-Maine |"></iframe>
+                    </div>
+                    <div className='dialogDescription'>
+                        Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !
+                    </div>
+                </div>
+            </Dialog>
         </>
     )
 }
