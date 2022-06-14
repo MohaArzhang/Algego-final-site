@@ -92,6 +92,14 @@
   transition: 0.5s;
 }
 
+.hamBack {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  top: .7rem;
+  right: 1.5rem;
+}
+
 .hamShow,
 .hamHide,
 .hamColor {
@@ -106,7 +114,7 @@
   transition: 500ms;
 }
 
-.hamShow:hover {
+.hamBack:hover .hamShow{
   right: 4rem;
 }
 
@@ -359,7 +367,6 @@
   left: -.1rem;
   font-size: 5rem;
   font-weight: bold;
-  /* width: fit-content; */
 }
 
 .shortDescription {
@@ -391,7 +398,6 @@
 
 .graySection1,
 .graySection2 {
-  /* width: 100%; */
   background-color: var(--lightGray);
   height: 600px;
   padding: 20px;
@@ -421,23 +427,21 @@
   transform: rotate(90deg);
   position: sticky;
   top: 0;
-  /* width: max-content; */
 }
 
-#realisationTitleRotateShow {
+#realisationTitleRotateShow, #realisationTitleRotateHide {
   position: relative;
   top: -500px;
   left: -650px;
-  animation: fadeIn 1000ms forwards;
+  animation: fadeIn 250ms forwards;
 }
 
 #realisationTitleRotateHide {
-  opacity: 0;
+  animation: fadeOut 250ms forwards;
 }
 
 .realisationImage {
   width: 350px;
-  /* margin: 0 auto 0 60px; */
 }
 
 .realisation {
@@ -447,45 +451,15 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
   margin: auto 30px;
   margin-bottom: 60px;
 }
-/* 
-.realisationTest1 {
-  animation: animatioinTest 500ms forwards;
-  margin: 0 auto 0 60px;
-}
-
-.realisationTest2 {
-  overflow: hidden;
-  width: 350px;
-  height: 350px;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-top: 264px;
-}
-
-@keyframes animatioinTest {
-  0% {
-    margin-top: -350px;
-  }
-  100% {
-    margin: 0 auto 0 60px;
-  }
-} */
 
 .realisationText {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   width: 350px;
   min-height: 350px;
-  /* margin: 0 auto 0 60px; */
-  /* margin: auto; */
   background-color: gray;
   color: white;
   font-size: 1rem;
@@ -501,7 +475,6 @@
 .realisation:hover .realisationText {
   margin-top: -350px;
   transition: 1s;
-  /* animation: textSlideUp 1000ms forwards; */
 }
 
 @keyframes textSlideUp {
@@ -522,7 +495,6 @@
 }
 
 .dialogWrapper {
-  /* background-color: var(--lightGray); */
   background-color: var(--blueLight);
   height: 100vh;
 }
@@ -568,15 +540,21 @@ text-align: center !important;
   background-color: var(--lightGray);
 }
 
+#realisationEnding {
+  margin-top: 100px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 120px;
+}
+
 .arrow {
   position: relative;
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
+  top: 20px;
+  left: -10px;
   display: flex;
   width: fit-content;
-  margin: 40px auto;
-  /* right: 5% */
+  margin: auto;
 }
 
 .arrow span {
@@ -587,8 +565,6 @@ text-align: center !important;
   border-right: 5px solid var(--red);
   transform: rotate(-45deg);
   margin: -2px;
-  /* animation: animate 2s infinite; */
-  /* transition: 1s; */
 }
 
 .arrow:hover span {
@@ -608,7 +584,6 @@ text-align: center !important;
 @keyframes animateArrow {
   0% {
       opacity: 1;
-      /* transform: rotate(-45deg) translate(-10px, -10px); */
       transform: rotate(-45deg) translate(0, 0);
   }
   
@@ -619,7 +594,6 @@ text-align: center !important;
 
   100% {
       opacity: 1;
-      /* transform: rotate(-45deg) translate(10px, 10px); */
       transform: rotate(-45deg) translate(10px, 10px);
   }
 }
@@ -692,8 +666,6 @@ text-align: center !important;
   color: black !important;
   font-size: 3rem !important;
   opacity: 0.15 !important;
-  /* position: relative; */
-  /* top: -20px; */
 }
 
 .slick-next:before {
@@ -710,7 +682,6 @@ text-align: center !important;
 
 .slick-slider .slick-list,
 .slick-slider .slick-track {
-  /* width: 1000px; */
   margin: auto;
 }
 .slick-list .slick-slider {
@@ -739,3 +710,4 @@ text-align: center !important;
 .footerTxt {
   margin: 0 2rem;
 }
+/* Footer end */

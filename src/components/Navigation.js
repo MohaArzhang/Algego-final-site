@@ -67,7 +67,7 @@ function Navigation() {
             <div>
               <Logo />
             </div>
-            <div onClick={() => setShowMenu(!showMenu)}>
+            <div className='hamBack' onClick={() => setShowMenu(!showMenu)}>
               <div className={hamburger}>
                 &nbsp;
               </div>
