@@ -12,7 +12,6 @@ import Dialog from '@mui/material/Dialog'
 import { IconButton, Toolbar } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 
-
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -65,7 +64,7 @@ export default function Realisation() {
     return (
         <>
             <div className='container'>
-                <div className='realisationWrapper'>
+                {/* <div className='realisationWrapper'>
                     <div className='graySection1'
                         data-aos='slide-right'
                         data-aos-duration='1200'
@@ -104,6 +103,45 @@ export default function Realisation() {
                     <div id='realisationTitleWrapper'>
                         <p id='realisationTitleRotate'>Quelques réalisations</p>
                     </div>
+                </div> */}
+
+
+                <div className='realisationWrapper'>
+                    <div className='graySection1'
+                        data-aos='slide-right'
+                        data-aos-duration='1200'
+                        data-aos-once="true"
+                        data-aos-anchor=".realisation1"
+                    >
+                        <div className='row realisationRow'>
+                            <div className='col-xl-6'>
+                                <div className='realisation realisation1'
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-once="true"
+                                    data-aos-anchor=".realisation2"
+                                >
+                                    <RealisationComp image={Test1} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                </div>
+                            </div>
+                            <div className='col-xl-6'>
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <div className='col-xl-6'>
+                                <div className='realisation realisation2'
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-once="true"
+                                    data-aos-delay="200"
+                                >
+                                    <RealisationComp image={Test2} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                </div>
+                            </div>
+                            <div className='col-xl-6'>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='realisationWrapper'>
                     <div className='graySection2'
@@ -112,7 +150,7 @@ export default function Realisation() {
                         data-aos-once="true"
                         data-aos-anchor=".realisation3"
                     >
-                        <div className='row realisationSecondRow'>
+                        <div className='row realisationRow'>
                             <div className='col-xl-6'>
                                 <div className='realisation realisation3'
                                     data-aos='zoom-in'
@@ -159,7 +197,14 @@ export default function Realisation() {
                             </div>
                         </div>
                     </div>
-                    <div id='realisationTitleWrapper'>
+                </div>
+                <div>
+                    Voir d'autres réalisations
+                    <div className="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
                     </div>
                 </div>
             </div>
@@ -180,7 +225,7 @@ export default function Realisation() {
                         <CloseIcon />
                     </IconButton>
                 </Toolbar>
-                <DialogComp dialogTitle="Desjardins" dialogSub='Une courte vidéo pour Desjardin' videoLink={link} dialogDescription="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !"/>
+                <DialogComp dialogTitle="Desjardins" dialogSub='Une courte vidéo pour Desjardin' videoLink={link} dialogDescription="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
             </Dialog>
         </>
     )

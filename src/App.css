@@ -25,6 +25,7 @@
 
 #afterHeaderWrapper {
   animation: fadeIn 1s 2.5s backwards;
+  margin-bottom: 200px;
 }
 
 /* Logo animation start */
@@ -374,52 +375,69 @@
 .shortDescription p {
   margin-bottom: 0;
 }
-
 /* Services section end */
 
 /* Réalisation start */
 .realisationWrapper {
-  height: 800px;
+  height: 720px;
   display: flex;
+  margin: auto;
+  width: fit-content;
+}
+
+.graySection1 {
+  min-width: 890px
 }
 
 .graySection1,
 .graySection2 {
-  width: 90%;
+  /* width: 100%; */
   background-color: var(--lightGray);
   height: 600px;
   padding: 20px;
   /* border: solid 13px var(--midGray); */
 }
 
+.graySectionTest {
+  margin-top: 100px;
+  width: 100%;
+  background-color: var(--lightGray);
+  height: 600px;
+  padding: 20px;
+  
+}
+
 .graySection2 {
   margin-top: 100px;
 }
 
-#realisationTitleWrapper {
-  width: 10%;
-}
-
-#realisationTitleRotate {
+#realisationTitleRotateWrapper {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  width: 600px;
-  font-size: 2.5rem;
-  position: relative;
-  top: 0;
-  left: 155px;
-  transform-origin: 0 0;
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: right;
+  align-content: flex-start;
   transform: rotate(90deg);
-  text-align: left;
+  position: sticky;
+  top: 0;
+  /* width: max-content; */
+}
+
+#realisationTitleRotateShow {
+  position: relative;
+  top: -500px;
+  left: -650px;
+  animation: fadeIn 1000ms forwards;
+}
+
+#realisationTitleRotateHide {
+  opacity: 0;
 }
 
 .realisationImage {
   width: 350px;
-  margin: 0 auto 0 60px;
-}
-
-.realisationSecondRow {
-  /* margin-top: -130px; */
+  /* margin: 0 auto 0 60px; */
 }
 
 .realisation {
@@ -429,8 +447,10 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  margin: auto 30px;
+  margin-bottom: 60px;
 }
 /* 
 .realisationTest1 {
@@ -464,7 +484,8 @@
   text-align: center;
   width: 350px;
   min-height: 350px;
-  margin: 0 auto 0 60px;
+  /* margin: 0 auto 0 60px; */
+  /* margin: auto; */
   background-color: gray;
   color: white;
   font-size: 1rem;
@@ -496,7 +517,7 @@
   margin-bottom: 30px;
 }
 
-.realisationSecondRow {
+.realisationRow {
   margin-top: -110px;
 }
 
@@ -524,10 +545,6 @@ text-align: center !important;
   font-family: 'Quicksand', sans-serif;
 }
 
-iframe {
-  /* max-height: 350px; */
-}
-
 .dialogTitle {
   width: fit-content;
   margin: 20px auto;
@@ -550,6 +567,62 @@ iframe {
   border-radius: 50%;
   background-color: var(--lightGray);
 }
+
+.arrow {
+  position: relative;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  width: fit-content;
+  margin: 40px auto;
+  /* right: 5% */
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid var(--red);
+  border-right: 5px solid var(--red);
+  transform: rotate(-45deg);
+  margin: -2px;
+  /* animation: animate 2s infinite; */
+  /* transition: 1s; */
+}
+
+.arrow:hover span {
+  animation: animateArrow 1s forwards;
+  transition: 1s;
+
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes animateArrow {
+  0% {
+      opacity: 1;
+      /* transform: rotate(-45deg) translate(-10px, -10px); */
+      transform: rotate(-45deg) translate(0, 0);
+  }
+  
+  50% {
+      opacity: 0;
+      transform: rotate(-45deg) translate(0, 0);
+  }
+
+  100% {
+      opacity: 1;
+      /* transform: rotate(-45deg) translate(10px, 10px); */
+      transform: rotate(-45deg) translate(10px, 10px);
+  }
+}
 /* Réalisation end */
 
 /* Contact start */
@@ -559,7 +632,7 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 #contactLineTwo a {
@@ -597,7 +670,7 @@ iframe {
 }
 
 .widthImage {
-  width: 100px;
+  width: 180px;
   filter: grayscale(100%);
   opacity: 0.4;
   transition: 700ms;
@@ -637,9 +710,13 @@ iframe {
 
 .slick-slider .slick-list,
 .slick-slider .slick-track {
-  width: 1000px;
+  /* width: 1000px; */
   margin: auto;
 }
+.slick-list .slick-slider {
+  width: 2000px !important;
+}
+
 
 /* Carousel end */
 

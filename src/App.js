@@ -10,6 +10,7 @@ import Realisation from './components/Realisation';
 import Contact from './components/Contact';
 import Carousel from './components/Carousel'
 import Footer from './components/Footer';
+import RealisationTitle from './components/RealisationTitle';
 
 const FirstLogo = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
             {typeViewEnd ? <EndTypeWriter /> : ''}
           </div>
         </div>
+        <RealisationTitle />
         <Realisation />
         <div>
           <Contact />

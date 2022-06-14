@@ -34,7 +34,7 @@ function Services() {
                     <ServicesComp letter='F' longDescription={longDescriptionFormation} shortDescription='Formation' />
                 </div>
 
-                <div className='col-xl-4 col-lg-12' data-aos='fade-up' data-aos-duration='1000'>
+                <div className='col-xl-4 col-lg-12' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='400'>
                     <ServicesComp letter='C' longDescription={longDescriptionCommunication} shortDescription='Communication' />
                 </div>
 
