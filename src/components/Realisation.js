@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Test1 from '../images/test-1.png'
 import Test2 from '../images/test-2.png'
 import Test3 from '../images/test-3.png'
@@ -11,22 +11,16 @@ import Slide from '@mui/material/Slide';
 import Dialog from '@mui/material/Dialog'
 import { IconButton, Toolbar } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
-import RealisationTitle from '../components/RealisationTitle';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-// let elem = document.querySelector('realisationEnding');
-// let rect = elem.getBoundingClientRect();
-// console.log("x: " + rect.x);
-// console.log("y: " + rect.y);
-
 export default function Realisation() {
     AOS.init();
 
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -69,7 +63,6 @@ export default function Realisation() {
 
     return (
         <>
-            {/* <RealisationTitle /> */}
             <div className='container'>
                 <div className='realisationAndTitle'>
                     <div>
@@ -194,7 +187,7 @@ export default function Realisation() {
                         </div>
                     </div>
                     <div id='forSticky'>
-                        <div id='realisationTitleRotateWrapper2'>
+                        <div id='realisationTitleRotateWrapper'>
                             <p >Quelques réalisations</p>
                         </div>
                     </div>

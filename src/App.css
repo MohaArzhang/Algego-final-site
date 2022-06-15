@@ -38,7 +38,6 @@
     opacity: 0;
   }
 }
-
 /* Logo animation end */
 
 /* Navigation area start */
@@ -60,7 +59,6 @@
 .logoImageHide {
   animation: fadeOut 100ms forwards;
 }
-
 /* Top logo end */
 
 .topSection {
@@ -180,7 +178,6 @@
 .menuContentItem {
   font-family: 'Quicksand', sans-serif;
   font-size: 4rem;
-  /* font-weight: normal; */
   list-style-type: none;
   transform: translateX(-600%);
   color: var(--blueDark);
@@ -267,7 +264,6 @@
 .menuBackgroundHide {
   transform: scale(0);
 }
-
 /* Navigation background end */
 /* Navigation area end */
 
@@ -370,7 +366,6 @@
 .shortDescription p {
   margin-bottom: 0;
 }
-
 /* Services section end */
 
 /* Réalisation start */
@@ -390,7 +385,6 @@
   background-color: var(--lightGray);
   height: 600px;
   padding: 20px;
-  /* border: solid 13px var(--midGray); */
 }
 
 .graySectionTest {
@@ -406,36 +400,26 @@
   margin-top: 100px;
 }
 
-#realisationTitleRotateWrapper2 {
+#realisationTitleRotateWrapper {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 2.3rem;
   display: flex;
   justify-content: right;
   align-content: flex-start;
-  /* transform: rotate(90deg); */
   position: sticky;
   top: 20px;
-  /* bottom: -2800px; */
   max-height: fit-content;
   
 }
 
 .realisationAndTitle {
   display: flex;
-  /* width: fit-content; */
-  /* position: sticky; */
-  /* margin-right: 0; */
-  /* position: relative; */
-  /* top: 0; */
   max-width: fit-content;
-  /* right: 0; */
   margin: auto;
-  /* position: sticky; */
-  /* margin-right: 0; */
 }
 
-#realisationTitleRotateWrapper2 p {
+#realisationTitleRotateWrapper p {
   margin: 0 0 0 30px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -444,21 +428,6 @@
 #forSticky {
   max-height: 1420px;
   position: sticky;
-}
-
-#realisationTitleRotateShow,
-#realisationTitleRotateHide {
-  position: relative;
-  top: -500px;
-  left: -650px;
-}
-
-#realisationTitleRotateShow {
-  animation: fadeIn 100ms forwards;
-}
-
-#realisationTitleRotateHide {
-  animation: fadeOut 100ms forwards;
 }
 
 .realisationImage {
@@ -625,8 +594,7 @@
   }
 }
 
-/* ******************* NEW ARROW ****************************** */
-
+/* ARROW button start */
 .round,
 .servicesRound {
   position: relative;
@@ -731,12 +699,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-
-
-
-
-
-
+/* ARROW button start */
 /* Réalisation end */
 
 /* Contact start */
@@ -769,7 +732,6 @@
   font-size: 3rem;
   font-weight: bold;
 }
-
 /* Contact end */
 
 /* Carousel start */
@@ -829,8 +791,6 @@
 .slick-list .slick-slider {
   width: 2000px !important;
 }
-
-
 /* Carousel end */
 
 /* Footer start */
@@ -852,5 +812,4 @@
 .footerTxt {
   margin: 0 2rem;
 }
-
 /* Footer end */
