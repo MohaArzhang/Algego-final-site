@@ -19,10 +19,6 @@
   /* max-width: fit-content; */
 }
 
-.bodyWrapper {
-  max-width: 1900px;
-}
-
 #afterHeaderWrapper {
   animation: fadeIn 1s 2.5s backwards;
   margin-bottom: 200px;
@@ -47,7 +43,8 @@
 
 /* Navigation area start */
 /* Top logo start */
-.logoImage {
+.logoImageShow,
+.logoImageHide {
   display: flex;
   position: fixed;
   top: 2rem;
@@ -57,11 +54,11 @@
 }
 
 .logoImageShow {
-  opacity: 1;
+  animation: fadeIn 100ms forwards;
 }
 
 .logoImageHide {
-  opacity: 0;
+  animation: fadeOut 100ms forwards;
 }
 
 /* Top logo end */
@@ -86,7 +83,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* width: 100vw; */
   height: 125px;
   z-index: 9;
   transition: 0.5s;
@@ -114,7 +110,7 @@
   transition: 500ms;
 }
 
-.hamBack:hover .hamShow{
+.hamBack:hover .hamShow {
   right: 4rem;
 }
 
@@ -287,19 +283,15 @@
 }
 
 .longDescription {
-  font-family: 'Quicksand', sans-serif;
-  position: relative;
   animation: fadeIn 2s;
   display: none;
 }
 
 .longDesText {
-  height: fit-content;
-  margin-top: auto;
-  margin-bottom: auto;
   text-align: left;
   font-size: 1.3rem;
-  padding-right: 30px;
+  padding-right: 4rem;
+  min-height: 10rem;
 }
 
 .serviceWrapper {
@@ -320,12 +312,7 @@
 #circleAndLetter {
   position: relative;
   transition: 1000ms;
-  /* display: flex; */
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   width: fit-content;
-  /* margin-left: 200px; */
 }
 
 .serviceWrapper:hover #circleAndLetter {
@@ -334,10 +321,11 @@
 }
 
 .serviceWrapper:hover .longDescription {
-  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  display: block;
   height: inherit;
   position: relative;
-  top: -120px;
+  top: -12rem;
   padding-left: 250px;
 }
 
@@ -382,6 +370,7 @@
 .shortDescription p {
   margin-bottom: 0;
 }
+
 /* Services section end */
 
 /* Réalisation start */
@@ -410,34 +399,66 @@
   background-color: var(--lightGray);
   height: 600px;
   padding: 20px;
-  
+
 }
 
 .graySection2 {
   margin-top: 100px;
 }
 
-#realisationTitleRotateWrapper {
+#realisationTitleRotateWrapper2 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 2.3rem;
   display: flex;
   justify-content: right;
   align-content: flex-start;
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   position: sticky;
-  top: 0;
+  top: 20px;
+  /* bottom: -2800px; */
+  max-height: fit-content;
+  
 }
 
-#realisationTitleRotateShow, #realisationTitleRotateHide {
+.realisationAndTitle {
+  display: flex;
+  /* width: fit-content; */
+  /* position: sticky; */
+  /* margin-right: 0; */
+  /* position: relative; */
+  /* top: 0; */
+  max-width: fit-content;
+  /* right: 0; */
+  margin: auto;
+  /* position: sticky; */
+  /* margin-right: 0; */
+}
+
+#realisationTitleRotateWrapper2 p {
+  margin: 0 0 0 30px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+#forSticky {
+  max-height: 1420px;
+  position: sticky;
+}
+
+#realisationTitleRotateShow,
+#realisationTitleRotateHide {
   position: relative;
   top: -500px;
   left: -650px;
-  animation: fadeIn 250ms forwards;
+}
+
+#realisationTitleRotateShow {
+  animation: fadeIn 100ms forwards;
 }
 
 #realisationTitleRotateHide {
-  animation: fadeOut 250ms forwards;
+  animation: fadeOut 100ms forwards;
 }
 
 .realisationImage {
@@ -453,6 +474,11 @@
   flex-direction: column;
   margin: auto 30px;
   margin-bottom: 60px;
+}
+
+.realisation3 {
+  width: fit-content;
+  margin: auto;
 }
 
 .realisationText {
@@ -481,6 +507,7 @@
   0% {
     margin: 0 auto 0 60px;
   }
+
   100% {
     margin-top: -350px;
   }
@@ -500,9 +527,9 @@
 }
 
 .css-10ghrmp-MuiPaper-root-MuiAppBar-root {
-background-color: white !important;
-color: black !important;
-text-align: center !important;
+  background-color: white !important;
+  color: black !important;
+  text-align: center !important;
 }
 
 .clipPlayerSite {
@@ -548,16 +575,16 @@ text-align: center !important;
   margin-bottom: 120px;
 }
 
-.arrow {
+.arrowWrapper {
   position: relative;
   top: 20px;
   left: -10px;
   display: flex;
   width: fit-content;
-  margin: auto;
+  margin: 20px auto;
 }
 
-.arrow span {
+.arrowWrapper span {
   display: block;
   width: 30px;
   height: 30px;
@@ -567,36 +594,149 @@ text-align: center !important;
   margin: -2px;
 }
 
-.arrow:hover span {
+.arrowWrapper:hover span {
   animation: animateArrow 1s forwards;
   transition: 1s;
 
 }
 
-.arrow span:nth-child(2) {
+.arrowWrapper span:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.arrow span:nth-child(3) {
+.arrowWrapper span:nth-child(3) {
   animation-delay: 0.4s;
 }
 
 @keyframes animateArrow {
   0% {
-      opacity: 1;
-      transform: rotate(-45deg) translate(0, 0);
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, 0);
   }
-  
+
   50% {
-      opacity: 0;
-      transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+    transform: rotate(-45deg) translate(0, 0);
   }
 
   100% {
-      opacity: 1;
-      transform: rotate(-45deg) translate(10px, 10px);
+    opacity: 1;
+    transform: rotate(-45deg) translate(10px, 10px);
   }
 }
+
+/* ******************* NEW ARROW ****************************** */
+
+.round,
+.servicesRound {
+  position: relative;
+  border: 3px solid var(--red);
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.servicesRound {
+  border: 3px solid white;
+  margin-right: 4rem;
+}
+
+#arrowContainer,
+#servicesArrowContainer {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  left: -2px;
+}
+
+#arrowContainer .arrow,
+#servicesArrowContainer .arrow {
+  left: 30%;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0px;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  top: 16px;
+}
+
+.secondary {
+  margin-left: 8px;
+}
+
+.servicesNext {
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+.next {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0OTIuNyA0OTIuNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkyLjcgNDkyLjc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojQzMwODI1O30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4OS41LDkuOWMyMy40LDIzLjIsMTM2LjIsMTQ2LjcsMTkwLDIwNS43YzI4LDMzLjMsMSw2MS45LTguMSw3Mi4zQzM1NC41LDMwNi42LDIyNy45LDQ0MiwxOTEuNiw0ODAuNQoJYy0zMS44LDMzLjgtOTcuNy0zOC4xLTczLjQtNjQuM2MzMS4zLTMzLjgsMTYzLjMtMTY4LjYsMTYzLjMtMTY4LjZTMTUwLjEsMTAwLjcsMTIwLjIsNjguNVMxNTguNi0yMC45LDE4OS41LDkuOXoiLz4KPC9zdmc+Cg==);
+}
+
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+
+  26% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.arrow.primary.bounceAlpha {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.round:hover .arrow,
+.servicesRound:hover .arrow {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.round:hover .arrow.primary,
+.servicesRound:hover .arrow.primary {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+
+
+
+
 /* Réalisation end */
 
 /* Contact start */
@@ -629,6 +769,7 @@ text-align: center !important;
   font-size: 3rem;
   font-weight: bold;
 }
+
 /* Contact end */
 
 /* Carousel start */
@@ -684,6 +825,7 @@ text-align: center !important;
 .slick-slider .slick-track {
   margin: auto;
 }
+
 .slick-list .slick-slider {
   width: 2000px !important;
 }
@@ -710,4 +852,5 @@ text-align: center !important;
 .footerTxt {
   margin: 0 2rem;
 }
+
 /* Footer end */

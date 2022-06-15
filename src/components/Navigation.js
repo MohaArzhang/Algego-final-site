@@ -4,13 +4,12 @@ import LogoImage from '../images/logo-blanc.png'
 import UpTypeWriter from '../components/UpTypeWriter'
 
 
-function Navigation() {
-  const [showMenu, setShowMenu] = useState(false)
+function Navigation(props) {
   const [hamColor, setHmaColor] = useState(false)
   const [showLogo, setShowLogo] = useState(true)
 
   const changeLogoVisibility = () => {
-    if (window.scrollY >= 1100) {
+    if (window.scrollY >= window.innerHeight) {
       setShowLogo(false)
     } else {
       setShowLogo(true)
@@ -23,7 +22,7 @@ function Navigation() {
   })
 
   const changeHamColor = () => {
-    if (window.scrollY >= 1100) {
+    if (window.scrollY >= window.innerHeight) {
       setHmaColor(true)
     } else {
       setHmaColor(false)
@@ -38,20 +37,13 @@ function Navigation() {
   const imageShow = showLogo ? 'logoImageShow' : 'logoImageHide'
 
   let Menu
-  const Logo = () => {
-    return (
-      <>
-        <img className={`logoImage ${imageShow}`} src={LogoImage} />
-      </>
-    )
-  }
 
   const handleMenuClick = () => {
-    setShowMenu(!showMenu)
+    props.setShowMenu(!props.showMenu)
   }
 
   let hamburger = ''
-  if (showMenu) {
+  if (props.showMenu) {
     hamburger = 'hamHide'
   } else if (hamColor) {
     hamburger = 'hamColor'
@@ -65,9 +57,9 @@ function Navigation() {
         <div>
           <div className='navbar'>
             <div>
-              <Logo />
+              <img className={imageShow} src={LogoImage} />
             </div>
-            <div className='hamBack' onClick={() => setShowMenu(!showMenu)}>
+            <div className='hamBack' onClick={() => props.setShowMenu(!props.showMenu)}>
               <div className={hamburger}>
                 &nbsp;
               </div>
@@ -80,12 +72,12 @@ function Navigation() {
         <div>
           <UpTypeWriter />
         </div>
-        <div className={showMenu ? 'menuBackgroundShow' : 'menuBackgroundHide'}>
+        <div className={props.showMenu ? 'menuBackgroundShow' : 'menuBackgroundHide'}>
         </div>
 
       </div>
     </>
-  if (showMenu) {
+  if (props.showMenu) {
     Menu =
       <div className='menuContent'>
         <a href='#'><div className='menuContentItem'><div className='menuContentItemTxt'>Accueil</div></div></a>

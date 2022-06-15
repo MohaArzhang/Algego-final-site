@@ -11,11 +11,17 @@ import Slide from '@mui/material/Slide';
 import Dialog from '@mui/material/Dialog'
 import { IconButton, Toolbar } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
+import RealisationTitle from '../components/RealisationTitle';
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
+// let elem = document.querySelector('realisationEnding');
+// let rect = elem.getBoundingClientRect();
+// console.log("x: " + rect.x);
+// console.log("y: " + rect.y);
 
 export default function Realisation() {
     AOS.init();
@@ -63,112 +69,139 @@ export default function Realisation() {
 
     return (
         <>
+            {/* <RealisationTitle /> */}
             <div className='container'>
-                <div className='realisationWrapper'>
-                    <div className='graySection1'
-                        data-aos='slide-right'
-                        data-aos-duration='1200'
-                        data-aos-once="true"
-                        data-aos-anchor=".realisation1"
-                    >
-                        <div className='row realisationRow'>
-                            <div className='col-xl-6'>
-                                <div className='realisation realisation1'
-                                    data-aos='zoom-in'
-                                    data-aos-duration='1200'
-                                    data-aos-once="true"
-                                    data-aos-anchor=".realisation2"
-                                >
-                                    <RealisationComp image={Test1} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                <div className='realisationAndTitle'>
+                    <div>
+                        <div className='realisationWrapper'>
+                            <div className='graySection1'
+                                data-aos='slide-right'
+                                data-aos-duration='1200'
+                                data-aos-once="true"
+                                data-aos-anchor=".realisation1"
+                            >
+                                <div className='row realisationRow'>
+                                    <div className='col-xl-6'>
+                                        <div className='realisation realisation1'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay="800"
+                                            data-aos-once="true"
+                                            data-aos-anchor=".realisation2"
+                                        >
+                                            <RealisationComp image={Test1} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
+                                    <div className='col-xl-6'>
+                                        <div className='realisation realisation2'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay="500"
+                                            data-aos-once="true"
+                                            data-aos-anchor=".realisation3"
+                                        >
+                                            <RealisationComp image={Test6} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
+                                    {/* <div className='col-xl-6'>
+                            </div> */}
                                 </div>
-                            </div>
-                            <div className='col-xl-6'>
+                                <div className='row'>
+                                    <div className='col-xl-12'>
+                                        <div className='realisation realisation3'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay="700"
+                                            data-aos-once="true"
+                                        >
+                                            <RealisationComp image={Test2} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
+                                    {/* <div className='col-xl-6'>
+                            </div> */}
+                                </div>
                             </div>
                         </div>
-                        <div className='row'>
-                            <div className='col-xl-6'>
-                                <div className='realisation realisation2'
-                                    data-aos='zoom-in'
-                                    data-aos-duration='1200'
-                                    data-aos-once="true"
-                                    data-aos-delay="200"
-                                >
-                                    <RealisationComp image={Test2} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                        <div className='realisationWrapper'>
+                            <div className='graySection2'
+                                data-aos='slide-right'
+                                data-aos-duration='1200'
+                                data-aos-once="true"
+                                data-aos-anchor=".realisation4"
+                            >
+                                <div className='row realisationRow'>
+                                    <div className='col-xl-6'>
+                                        <div className='realisation realisation4'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay='800'
+                                            data-aos-once="true"
+                                            data-aos-anchor='.realisation5'
+                                        >
+                                            <RealisationComp image={Test3} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
+                                    <div className='col-xl-6'>
+                                        <div className='realisation realisation5'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay='500'
+                                            data-aos-once="true"
+                                            data-aos-anchor='.realisation6'
+                                        >
+                                            <RealisationComp image={Test4} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row'>
+                                    <div className='col-xl-6'>
+                                        <div className='realisation realisation6'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay='700'
+                                            data-aos-once="true"
+                                            data-aos-anchor='.realisation7'
+                                        >
+                                            <RealisationComp image={Test5} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
+                                    <div className='col-xl-6'>
+                                        <div className='realisation realisation7'
+                                            data-aos='zoom-in'
+                                            data-aos-duration='1200'
+                                            data-aos-delay='900'
+                                            data-aos-once="true"
+                                        >
+                                            <RealisationComp image={Test6} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className='col-xl-6'>
+                        </div>
+                        <div id='realisationEnding'>
+                            Voir d'autres réalisations
+                            <div class="round">
+                                <div id="arrowContainer">
+                                    <span class="arrow primary next "></span>
+                                    <span class="arrow secondary next "></span>
+                                </div>
+                            </div>
+                            <div className="arrowWrapper">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='realisationWrapper'>
-                    <div className='graySection2'
-                        data-aos='slide-right'
-                        data-aos-duration='1200'
-                        data-aos-once="true"
-                        data-aos-anchor=".realisation3"
-                    >
-                        <div className='row realisationRow'>
-                            <div className='col-xl-6'>
-                                <div className='realisation realisation3'
-                                    data-aos='zoom-in'
-                                    data-aos-duration='1200'
-                                    data-aos-delay='300'
-                                    data-aos-once="true"
-                                    data-aos-anchor='.realisation4'
-                                >
-                                    <RealisationComp image={Test3} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
-                                </div>
-                            </div>
-                            <div className='col-xl-6'>
-                                <div className='realisation realisation4'
-                                    data-aos='zoom-in'
-                                    data-aos-duration='1200'
-                                    data-aos-once="true"
-                                    data-aos-anchor='.realisation5'
-                                >
-                                    <RealisationComp image={Test4} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
-                                </div>
-                            </div>
+                    <div id='forSticky'>
+                        <div id='realisationTitleRotateWrapper2'>
+                            <p >Quelques réalisations</p>
                         </div>
-                        <div className='row'>
-                            <div className='col-xl-6'>
-                                <div className='realisation realisation5'
-                                    data-aos='zoom-in'
-                                    data-aos-duration='1200'
-                                    data-aos-delay='600'
-                                    data-aos-once="true"
-                                    data-aos-anchor='.realisation6'
-                                >
-                                    <RealisationComp image={Test5} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
-                                </div>
-                            </div>
-                            <div className='col-xl-6'>
-                                <div className='realisation realisation6'
-                                    data-aos='zoom-in'
-                                    data-aos-duration='1200'
-                                    data-aos-delay='900'
-                                    data-aos-once="true"
-                                >
-                                    <RealisationComp image={Test6} description="Vous avez un projet de formation en ligne ou en mode hybride qui nécessite de la production vidéo el et du multimédia ? Nos experts assionnés (techno-pédagogues, réalisateurs, program meurs, modélisateurs 3D) ont hâte d'en iaser avec vous !" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id='realisationEnding'>
-                    Voir d'autres réalisations
-                    <div className="arrow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
                     </div>
                 </div>
             </div>
 
             <Dialog
-                // fullScreen
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}

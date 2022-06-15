@@ -1,7 +1,7 @@
 import AnimatedLogo from './images/circle-logo.gif'
 import './App.css';
 import MidTypeWriter from './components/MidTypeWriter'
-import React from 'react';
+import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Navigation from './components/Navigation';
 import Services from './components/Services'
@@ -10,7 +10,6 @@ import Realisation from './components/Realisation';
 import Contact from './components/Contact';
 import Carousel from './components/Carousel'
 import Footer from './components/Footer';
-import RealisationTitle from './components/RealisationTitle';
 
 const FirstLogo = () => {
   return (
@@ -23,16 +22,16 @@ const FirstLogo = () => {
 }
 
 const App = () => {
+  const [showMenu, setShowMenu] = useState(false)
   const { ref: typeRefMid, inView: typeViewMid } = useInView();
   const { ref: typeRefEnd, inView: typeViewEnd } = useInView();
   return (
     <>
       <div className='App'>
-        {/* <div className='container bodyWrapper'> */}
         <div>
           <FirstLogo />
         </div>
-        <Navigation />
+        <Navigation showMenu={showMenu} setShowMenu={setShowMenu} />
         <div id='afterHeaderWrapper'>
           <div className='textTypeWriter' ref={typeRefMid}>
             {typeViewMid ? <MidTypeWriter /> : ''}
@@ -42,7 +41,6 @@ const App = () => {
             {typeViewEnd ? <EndTypeWriter /> : ''}
           </div>
         </div>
-        <RealisationTitle />
         <Realisation />
         <div>
           <Contact />
@@ -54,8 +52,7 @@ const App = () => {
           <Footer />
         </div>
       </div>
-      {/* </div> */}
-    </>
+      é    </>
   );
 }
 

@@ -11,7 +11,17 @@ const ServicesComp = (props) => {
                 <div className='letterInCircle'>{props.letter}</div>
             </div>
             <div className='shortDescription'><p>{props.shortDescription1}</p><p>{props.shortDescription}</p></div>
-            <div className='longDescription'><div className='longDesText'>{props.longDescription}</div></div>
+            <div className='longDescription'>
+                <div className='longDesText'>
+                    {props.longDescription}
+                </div>
+                <div class="servicesRound">
+                    <div id="servicesArrowContainer">
+                        <span class="arrow primary servicesNext "></span>
+                        <span class="arrow secondary servicesNext "></span>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
