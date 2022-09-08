@@ -1,58 +1,41 @@
-import AnimatedLogo from './images/circle-logo.gif'
+import React from 'react';
 import './App.css';
-import MidTypeWriter from './components/MidTypeWriter'
-import React, { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import Navigation from './components/Navigation';
-import Services from './components/Services'
-import EndTypeWriter from './components/EndTypeWriter';
-import Realisation from './components/Realisation';
-import Contact from './components/Contact';
-import Carousel from './components/Carousel'
 import Footer from './components/Footer';
-
-const FirstLogo = () => {
-  return (
-    <>
-      <div className='firstLogo'>
-        <img src={AnimatedLogo} />
-      </div>
-    </>
-  )
-}
+import { BrowserRouter as BrowseRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import RealisationPage from './components/Realisation-Page'
+import AgencePage from './components/Agence-page'
+import ContactUs from './components/ContactUs-page'
+import Temoignage from './components/Temoignage-page'
+import HomeWithoutLogo from './components/HomeWithotLogo';
 
 const App = () => {
-  const [showMenu, setShowMenu] = useState(false)
-  const { ref: typeRefMid, inView: typeViewMid } = useInView();
-  const { ref: typeRefEnd, inView: typeViewEnd } = useInView();
   return (
-    <>
+    <BrowseRouter>
       <div className='App'>
-        <div>
-          <FirstLogo />
-        </div>
-        <Navigation showMenu={showMenu} setShowMenu={setShowMenu} />
-        <div id='afterHeaderWrapper'>
-          <div className='textTypeWriter' ref={typeRefMid}>
-            {typeViewMid ? <MidTypeWriter /> : ''}
-          </div>
-          <Services />
-          <div className='textTypeWriter' ref={typeRefEnd}>
-            {typeViewEnd ? <EndTypeWriter /> : ''}
-          </div>
-        </div>
-        <Realisation />
-        <div>
-          <Contact />
-        </div>
-        <div id='carouselContainer'>
-          <Carousel />
-        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+        <Routes>
+          <Route path='/home' element={<HomeWithoutLogo />} />
+        </Routes>
+        <Routes>
+          <Route path='/realisations' element={<RealisationPage />} />
+        </Routes>
+        <Routes>
+          <Route path='/agence' element={<AgencePage />} />
+        </Routes>
+        <Routes>
+          <Route path='/contactus' element={<ContactUs />} />
+        </Routes>
+        <Routes>
+          <Route path='/temoignage' element={<Temoignage />} />
+        </Routes>
         <div>
           <Footer />
         </div>
       </div>
-      é    </>
+    </BrowseRouter>
   );
 }
 

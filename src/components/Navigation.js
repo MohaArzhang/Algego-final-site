@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import BackgroundVideo from './Backgroundvideo'
+import { useLocation } from 'react-router-dom'
 import LogoImage from '../images/logo-blanc.png'
-import UpTypeWriter from '../components/UpTypeWriter'
-
+import BackVideo from './BackVideo'
 
 function Navigation(props) {
+  const location = useLocation
+  const pageNameClass = location.pathname === '/' ? 'topSection' : 'topSectionNoDelay'
+
   const [hamColor, setHmaColor] = useState(false)
   const [showLogo, setShowLogo] = useState(true)
 
@@ -51,9 +53,12 @@ function Navigation(props) {
     hamburger = 'hamShow'
   }
 
+  let ChosenBackVideo = <BackVideo />
+
   let HamAndVideo =
     <>
-      <div className='topSection'>
+      <div className={pageNameClass}>
+        {ChosenBackVideo}
         <div>
           <div className='navbar'>
             <div>
@@ -65,36 +70,33 @@ function Navigation(props) {
               </div>
             </div>
           </div>
-          <div>
-            <BackgroundVideo />
-          </div>
-        </div>
-        <div>
-          <UpTypeWriter />
         </div>
         <div className={props.showMenu ? 'menuBackgroundShow' : 'menuBackgroundHide'}>
         </div>
-
       </div>
     </>
+
   if (props.showMenu) {
     Menu =
-      <div className='menuContent'>
-        <a href='#'><div className='menuContentItem'><div className='menuContentItemTxt'>Accueil</div></div></a>
-        <div className='menuContentItem' onClick={handleMenuClick}><div className='menuContentItemTxt'>Quelques réalisations</div></div>
-        <div className='menuContentItem'><div className='menuContentItemTxt'>Jasons ensemble !</div></div>
-        <div className='menuContentItem'><div className='menuContentItemTxt'>Nos clients</div></div>
-
+      <div className='menuContentWrapper'>
+        <div className='menuContent'>
+          <div id='itemOne' className='menuContentItem' onClick={handleMenuClick}><div className='menuContentItemTxt'><a href='/home'>Accueil</a></div></div>
+          <div id='itemTwo' className='menuContentItem' onClick={handleMenuClick}><div className='menuContentItemTxt'><a href='/realisations'>Réalisations</a></div></div>
+          <div id='itemThree' className='menuContentItem' onClick={handleMenuClick}><div className='menuContentItemTxt'><a href='/temoignage'>Ce que disent nos clients</a></div></div>
+          <div id='itemFour' className='menuContentItem' onClick={handleMenuClick}><div className='menuContentItemTxt'><a href='/agence'>Agence</a></div></div>
+          <div id='itemFive' className='menuContentItem' onClick={handleMenuClick}><div className='menuContentItemTxt'><a href='/contactus'>Jasons ensemble !</a></div></div>
+        </div>
       </div>
   }
 
-  return (
-    <div>
-      {Menu}
-      {HamAndVideo}
-    </div>
-
-  )
+    return (
+      <>
+        <div>
+          {Menu}
+          {HamAndVideo}
+        </div>
+      </>
+    )
 }
 
 export default Navigation

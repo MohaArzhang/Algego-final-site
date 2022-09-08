@@ -1,4 +1,6 @@
 
+import React from "react"
+
 export default function Contact() {
     return (
         <>
@@ -8,8 +10,8 @@ export default function Contact() {
                         Vous avez un projet ? Nous sommes vos experts de confiance.
                     </div>
                     <div id='contactLineTwo'>
-                        <a href='#'>
-                            Jasons ensemble!
+                        <a href='/contactus'>
+                            Jasons ensemble !
                         </a>
                     </div>
                 </div>
