@@ -252,35 +252,35 @@ export default function Realisation() {
                     <div className='realisationTitleQuery'>
                         <p >Quelques réalisations</p>
                         <div className='row'>
-                            <div className='col-12'>
+                            <div className='col-12 col-lg-6'>
                                 <div className='realisation'>
                                     <RealisationComp image={Image1} description={description1} client={client1} click={handleClickOpen1} />
                                 </div>
                                 <div className='graySectionQuery'></div>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-12 col-lg-6'>
                                 <div className='realisation'>
                                     <RealisationComp image={Image2} description={description2} client={client2} click={handleClickOpen2} />
                                 </div>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-12 col-lg-6'>
                                 <div className='realisation'>
                                     <RealisationComp image={Image3} description={description3} client={client3} click={handleClickOpen3} />
                                 </div>
                                 <div className='graySectionQuery'></div>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-12 col-lg-6'>
                                 <div className='realisation'>
                                     <RealisationComp image={Image4} description={description4} client={client4} click={handleClickOpen4} />
                                 </div>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-12 col-lg-6'>
                                 <div className='realisation'>
                                     <RealisationComp image={Image5} description={description5} client={client5} click={handleClickOpen5} />
                                 </div>
                                 <div className='graySectionQuery'></div>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-12 col-lg-6'>
                                 <div className='realisation'>
                                     <RealisationComp image={Image6} description={description6} client={client6} click={handleClickOpen6} />
                                 </div>
