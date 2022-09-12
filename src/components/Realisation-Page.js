@@ -1,24 +1,24 @@
 import NavigationMenu from "./NavigationMenu"
-import Image1 from '../images/realisation/EnviroCompétences_Bornes_interactives.png'
-import Image2 from '../images/realisation/Desjardins_Force_E.png'
-import Image3 from '../images/realisation/Plasti_Hybride_avec_modélisation_3D.png'
-import Image4 from '../images/realisation/AQF_Plateforme_LMS.png'
-import Image5 from '../images/realisation/Loto-Québec_Vidéos_interactives.png'
-import Image6 from '../images/realisation/PlastiCompétences_PAMT_motion_capture.png'
-import Image7 from '../images/realisation/Bonduelle_plateforme-multimédia.png'
-import Image8 from '../images/realisation/Bixi_Tutoriels_vidéo.png'
-import Image9 from '../images/realisation/Desjardins_DTM+.png'
-import Image10 from '../images/realisation/Barreau_du_Qc_Espace_A.png'
-import Image11 from '../images/realisation/CQF_Gala_Maillondor.png'
-import Image12 from '../images/realisation/AMCQ_Assemblée-générale-Hybride.png'
-import Image13 from '../images/realisation/Riopelle_Vidéo_de_prestige.png'
-import Image14 from '../images/realisation/RF_websérie_de_fiction.png'
-import Image15 from '../images/realisation/Bonduelle_motion_design.png'
-import Image_mandat2 from '../images/mandats/Desjardins_Force_E.png'
-import Image_mandat4 from '../images/mandats/AQF_Plateforme_LMS.png'
-import Image_mandat5 from '../images/mandats/Loto-Québec_Vidéos_interactives.png'
-import Image_mandat8 from '../images/mandats/Bixi_Tutoriels_vidéo.png'
-import Image_mandat12 from '../images/mandats/AMCQ_Assemblée_générale-Hybride.png'
+import Image1 from '../images/realisation/enviroCompetences_realisation.jpg'
+import Image2 from '../images/realisation/Desjardins_Force_E.jpg'
+import Image3 from '../images/realisation/plasti_motion_realisation.jpg'
+import Image4 from '../images/realisation/aqf_realisation.jpg'
+import Image5 from '../images/realisation/loto_quebec_realisation.jpg'
+import Image6 from '../images/realisation/plasti_e_learning_realisation.jpg'
+import Image7 from '../images/realisation/bonduelle_palteforme_realisation.jpg'
+import Image8 from '../images/realisation/bixi_realisation.jpg'
+import Image9 from '../images/realisation/desjardins_realisation.jpg'
+import Image10 from '../images/realisation/barreau_realisation.jpg'
+import Image11 from '../images/realisation/cqf_realisation.jpg'
+import Image12 from '../images/realisation/amcq_realisation.jpg'
+import Image13 from '../images/realisation/riopelle_realisation.jpg'
+import Image14 from '../images/realisation/floralies_realisation.jpg'
+import Image15 from '../images/realisation/bonduelle_video_realisation.jpg'
+import Image_mandat2 from '../images/mandats/Desjardins_Force_E.jpg'
+import Image_mandat4 from '../images/mandats/AQF_Plateforme_LMS.jpg'
+import Image_mandat5 from '../images/mandats/loto_quebec_mandat.jpg'
+import Image_mandat8 from '../images/mandats/Bixi_mandat.jpg'
+import Image_mandat12 from '../images/mandats/amcqf_mandat.jpg'
 import React, { useState } from 'react'
 import RealisationTypeWriter from './RealisationTypeWriter'
 import LogoBlack from '../images/circle-black.png'
@@ -151,7 +151,7 @@ export default function RealisationPage() {
         return (
             <>
                 <div>
-                    <img className='realisationPageImage' src={props.image}></img>
+                    <img className='realisationPageImage' src={props.image} alt={props.alt}></img>
                 </div>
                 <div className='realisationPageText'>
                     <div className='realisationPageDes'>{props.description}</div>
@@ -229,27 +229,27 @@ export default function RealisationPage() {
     const dialogSub15 = 'Bonduelle'
 
     const link1 = <iframe src="https://player.vimeo.com/video/678893128?h=fd32598d78&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link2 = <img className='dilogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat2} width="565" />
+    const link2 = <img className='dialogImg' src={Image_mandat2} width="565" />
     const link3 = <iframe src="https://player.vimeo.com/video/563706535?h=6348db9387&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link4 = <img className='dilogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat4} width="565" />
-    const link5 = <img className='dilogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat5} width="565" />
+    const link4 = <img className='dialogImg' src={Image_mandat4} width="565" />
+    const link5 = <img className='dialogImg' src={Image_mandat5} width="565" />
     const link6 = <iframe src="https://player.vimeo.com/video/553482930?h=be7535dd1d" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NOBIS"></iframe>
     const link7 = <iframe src="https://player.vimeo.com/video/408662085?h=2e784450bb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link8 = <img className='dilogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat8} width="565" />
+    const link8 = <img className='dialogImg' src={Image_mandat8} width="565" />
     const link9 = <iframe src="https://player.vimeo.com/video/296545782?h=92c853ce9b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link10 = <iframe src="https://player.vimeo.com/video/559765735?h=4934f1725b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" frameborder="0" allow="autoplay" title=""></iframe>
-    const link11 = <iframe style={{ marginTop: '50px' }} src="https://dj5ag5n6bpdxo.cloudfront.net/experience/S2Drl5l" width="560" height="315" frameborder="0" allow="autoplay" title=""></iframe>
-    const link12 = <img style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat12} width="565" />
+    const link10 = <iframe src="https://player.vimeo.com/video/559765735?h=4934f1725b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay" title=""></iframe>
+    const link11 = <iframe className='dialogImg' src="https://dj5ag5n6bpdxo.cloudfront.net/experience/S2Drl5l" width="560" height="315" frameborder="0" allow="autoplay" title=""></iframe>
+    const link12 = <img className='dialogImg' src={Image_mandat12} width="565" />
     const link13 = <iframe src="https://player.vimeo.com/video/654168302?h=90fdaf7f73&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link14 = <iframe width="560" height="315" src="https://www.youtube.com/embed/iLxZCL6xKmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    const link15 = <iframe src="https://player.vimeo.com/video/746225971?h=1c83dd1e65&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NOBIS"></iframe>
+    const link14 = <iframe className='dialogImg' width="560" height="315" src="https://www.youtube.com/embed/iLxZCL6xKmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    const link15 = <iframe src="https://player.vimeo.com/video/746225971?h=1c83dd1e65&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bonduelle"></iframe>
 
     const mandat1 = 'Promouvoir des métiers du secteur de l’environnement auprès des jeunes et des populations immigrées par l’intermédiaire de bornes interactives multimédia.'
     const mandat2 = 'Concevoir une stratégie de communication et un parcours de formation en ligne pour accompagner le lancement d’un nouveau CRM.'
-    const mandat3 = 'Transposer une formation en présentiel en formation e-learning.'
+    const mandat3 = 'Optimiser l’appropriation des PAMT traditionnels auprès des employés par l’intégration de capsules vidéo immersives.'
     const mandat4 = 'Transposer des formations présentielles du CQF en formation e-learning, et développer une plateforme LMS intégrant un catalogue de vente en ligne des formations.'
     const mandat5 = 'Mettre en place un guide d’accueil vidéo pour accueillir les nouveaux employés et leur transmettre une vision globale de l’entreprise, dans une approche créateur d’émotion.'
-    const mandat6 = 'Optimiser l’appropriation des PAMT traditionnels auprès des employés par l’intégration de capsules vidéo immersives.'
+    const mandat6 = <span>Transposer une formation en présentiel en formation <em>e-learning.</em></span>
     const mandat7 = 'Animer et accompagner la gestion de changement liée au projet de rassembler en seul lieu trois sites de l’entreprise géographiquement distincts.'
     const mandat8 = 'Concevoir et produire des vidéos de formation autoportantes pour permettre aux employés saisonniers d’acquérir les connaissances essentielles à leur mission de déploiement de la flotte de vélos Bixi.'
     const mandat9 = 'Accompagner le déménagement de Desjardins à la Tour Olympique de Montréal et le changement de culture au sein de l’entreprise.'
@@ -260,18 +260,33 @@ export default function RealisationPage() {
     const mandat14 = 'Faire vivre une expérience immersive aux utilisateurs pour leur faire découvrir la vie des résidents et des professionnels des Résidences Floralies.'
     const mandat15 = 'Sensibiliser les employés aux nouvelles règles de vie.'
 
+    const alt1 = 'EnviroCompetences'
+    const alt2 = 'Desjardins'
+    const alt3 = 'Plasticompetence'
+    const alt4 = 'AQF'
+    const alt5 = 'Loto Quebec'
+    const alt6 = 'Plasticompetence'
+    const alt7 = 'Bonduelle'
+    const alt8 = 'BIXI'
+    const alt9 = 'Desjardins'
+    const alt10 = 'Barreau'
+    const alt11 = 'CQF'
+    const alt12 = 'AMCQF'
+    const alt13 = 'Riopelle'
+    const alt14 = 'Maison Floralies'
+    const alt15 = 'Bonduelle'
 
     const defi1 = 'Valoriser des métiers peu connus ou mal perçus (préjugés négatifs). Créer une expérience immersive pour favoriser l’engagement des publics cibles vers les métiers de l’environnement.'
     const defi2 = 'Convaincre les employés à changer leurs habitudes de travail et à adopter le nouveau CRM.'
-    const defi3 =
+    const defi3 = 'Montrer les environnements de travail ainsi que les chaînes de production en usine pour faciliter l’apprentissage des nouveaux employés.'
+    const defi4 = "Adapter le contenu pédagogique en structure d'enseignement en ligne, en collaboration avec les formateurs et les experts de contenu du CQF."
+    const defi5 = 'Stimuler l’intérêt et l’engagement des nouveaux employés sur le positionnement de Loto-Québec, et présenter les différentes activités du groupe.'
+    const defi6 =
         <ul>
             <li>Trouver une solution face à l’impossibilité de se rendre dans les usines pour filmer les machines en raison de la pandémie
             </li>
             <li>Trouver une alternative engageante avec un budget et  des délais de livraison raisonnables</li>
         </ul>
-    const defi4 = "Adapter le contenu pédagogique en structure d'enseignement en ligne, en collaboration avec les formateurs et les experts de contenu du CQF."
-    const defi5 = 'Stimuler l’intérêt et l’engagement des nouveaux employés sur le positionnement de Loto-Québec, et présenter les différentes activités du groupe.'
-    const defi6 = 'Montrer les environnements de travail ainsi que les chaînes de production en usine pour faciliter l’apprentissage des nouveaux employés.'
     const defi7 = 'Engager les employés dans la mise en place et l’appropriation des changements structurels et organisationnels à venir.'
     const defi8 = 'Acquérir le savoir faire et les meilleures pratiques des anciens employés  pour créer des mini-capsules vidéo de formation.'
     const defi9 = 'Toucher et intéresser une jeune génération d’employés, peu sensibles aux canaux traditionnels  de communication.'
@@ -299,9 +314,8 @@ export default function RealisationPage() {
         </ul>
     const solutions3 =
         <ul>
-            <li>Modélisation 3D des machines</li>
-            <li>Conception d’un personnage-expert 3D créé avec la technologie <em>motion capture</em></li>
-            <li>Dynamisation du parcours grâce à la coanimation entre le formateur </li>
+            <li>Faire une analyse technopédagogique des PAMT avec des experts de contenu pour identifier les points d'apprentissage essentiels</li>
+            <li>Modéliser en animation 3D toutes les machines outils et leurs composantes pour créer une expérience immersive afin d'augmenter la compréhension des étapes de production et favoriser la mémorisation des acquis</li>
         </ul>
     const solutions4 =
         <ul>
@@ -318,8 +332,9 @@ export default function RealisationPage() {
         </ul>
     const solutions6 =
         <ul>
-            <li>Faire une analyse technopédagogique des PAMT avec des experts de contenu pour identifier les points d'apprentissage essentiels</li>
-            <li>Modéliser en animation 3D toutes les machines outils et leurs composantes pour créer une expérience immersive afin d'augmenter la compréhension des étapes de production et favoriser la mémorisation des acquis</li>
+            <li>Modélisation 3D des machines</li>
+            <li>Conception d’un personnage-expert 3D créé avec la technologie <em>motion capture</em></li>
+            <li>Dynamisation du parcours grâce à la coanimation entre le formateur </li>
         </ul>
     const solutions7 =
         <ul>
@@ -385,6 +400,166 @@ export default function RealisationPage() {
     const category14 = 'Communication'
     const category15 = 'Formation'
 
+    function AllRealisations() {
+        return (
+            <>
+                <div className="row">
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="0"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image1} alt={alt1} description={description1} client={client1} click={handleClickOpen1} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="200"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image2} alt={alt2} description={description2} client={client2} click={handleClickOpen2} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="400"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image3} alt={alt3} description={description3} client={client3} click={handleClickOpen3} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="0"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image4} alt={alt4} description={description4} client={client4} click={handleClickOpen4} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="200"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image5} alt={alt5} description={description5} client={client5} click={handleClickOpen5} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="400"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image6} alt={alt6} description={description6} client={client6} click={handleClickOpen6} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="0"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image7} alt={alt7} description={description7} client={client7} click={handleClickOpen7} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="200"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image8} alt={alt8} description={description8} client={client8} click={handleClickOpen8} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="400"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image9} alt={alt9} description={description9} client={client9} click={handleClickOpen9} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="0"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image10} alt={alt10} description={description10} client={client10} click={handleClickOpen10} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="200"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image11} alt={alt11} description={description11} client={client11} click={handleClickOpen11} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="400"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image12} alt={alt12} description={description12} client={client12} click={handleClickOpen12} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="0"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image13} alt={alt13} description={description13} client={client13} click={handleClickOpen13} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-4">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="200"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image14} alt={alt14} description={description14} client={client14} click={handleClickOpen14} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-12 col-lg-4 realisationMarginTop">
+                        <div
+                            data-aos='zoom-in'
+                            data-aos-duration='1200'
+                            data-aos-delay="400"
+                            data-aos-once="true"
+                            className="realisationPage">
+                            <RealisationComp image={Image15} alt={alt15} description={description15} client={client15} click={handleClickOpen15} />
+                        </div>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+
     const DialogComp = (props) => {
         return (
             <div className='container dialogWrapper'>
@@ -432,164 +607,16 @@ export default function RealisationPage() {
                             <RealisationTypeWriter />
                         </div>
                     </div>
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="0"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image1} description={description1} client={client1} click={handleClickOpen1} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="200"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image2} description={description2} client={client2} click={handleClickOpen2} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="400"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image3} description={description3} client={client3} click={handleClickOpen3} />
-                        </div>
+                </div>
+            </div>
+            <div className="container-fluid realisationPageMain">
+                <div className="realisationPageGray">
+                    <div className="realisationPageForGray">
+                        <AllRealisations />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="0"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image4} description={description4} client={client4} click={handleClickOpen4} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="200"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image5} description={description5} client={client5} click={handleClickOpen5} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="400"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image6} description={description6} client={client6} click={handleClickOpen6} />
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="0"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image7} description={description7} client={client7} click={handleClickOpen7} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="200"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image8} description={description8} client={client8} click={handleClickOpen8} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="400"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image9} description={description9} client={client9} click={handleClickOpen9} />
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="0"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image10} description={description10} client={client10} click={handleClickOpen10} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="200"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image11} description={description11} client={client11} click={handleClickOpen11} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="400"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image12} description={description12} client={client12} click={handleClickOpen12} />
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="0"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image13} description={description13} client={client13} click={handleClickOpen13} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="200"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image14} description={description14} client={client14} click={handleClickOpen14} />
-                        </div>
-                    </div>
-                    <div className="col-xl-4 realisationMarginTop">
-                        <div
-                            data-aos='zoom-in'
-                            data-aos-duration='1200'
-                            data-aos-delay="400"
-                            data-aos-once="true"
-                            className="realisationPage">
-                            <RealisationComp image={Image15} description={description15} client={client15} click={handleClickOpen15} />
-                        </div>
-                    </div>
+                <div className="queryAllRealisations">
+                    <AllRealisations />
                 </div>
             </div>
 

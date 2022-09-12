@@ -12,7 +12,7 @@ const ContactUs = () => {
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>
             <div className='contactImage'>
-                <div className='contactImageInner'><h1>Un projet ? Jasons ensemble !<br/> De l'idée è la diffusion ALGEGO a la solution.</h1></div>
+                <div className='contactImageInner'><h1>Un projet ? Jasons ensemble !<br/> De l'idée à la diffusion, ALGEGO a la solution.</h1></div>
             </div>
             <div className='container contactUsWrapper'>
                 <div className='row'>

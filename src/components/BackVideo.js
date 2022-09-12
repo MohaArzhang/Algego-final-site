@@ -1,8 +1,7 @@
-import Teaser from '../video/video_page_accueil_finale.mp4';
-
+import Teaser from '../video/video_page_accueil_finale.mp4'
+import HeaderImage from '../images/contact-header-image.png'
 import UpTypeWriterMainHome from './UpTypeWriterMainHome'
-import UpTypeWriterOther from './UpTypeWriterOther';
-
+import UpTypeWriterOther from './UpTypeWriterOther'
 
 export default function BackVideo() {
   let TypeElement
@@ -15,7 +14,7 @@ export default function BackVideo() {
     <>
       <div className='upTypeWriterContainer'>
         {TypeElement}
-        <video
+        <video className='firstHeadBack'
           autoPlay
           loop
           muted
@@ -30,6 +29,7 @@ export default function BackVideo() {
         >
           <source src={Teaser} type='video/mp4' />
         </video>
+        <img className='secondHeadBack' style={{ objectFit: 'contain', width: '100vw' }} src={HeaderImage}></img>
       </div>
     </>
   )

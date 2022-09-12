@@ -7,7 +7,7 @@ import RealisationPage from './components/Realisation-Page'
 import AgencePage from './components/Agence-page'
 import ContactUs from './components/ContactUs-page'
 import Temoignage from './components/Temoignage-page'
-import HomeWithoutLogo from './components/HomeWithotLogo';
+import HomeWithoutLogo from './components/HomeWithotLogo'
 
 const App = () => {
   return (

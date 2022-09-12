@@ -7,7 +7,7 @@ import css from "classnames";
 
 const ContactForm = () => {
     const [alertShow, setAlertShow] = useState(false);
-    const [successtShow, setSuccessShow] = useState(false);
+    const [successShow, setSuccessShow] = useState(false);
 
     function Alert({ children, type, message }) {
         const [isShow, setIsShow] = useState(true);
@@ -55,11 +55,11 @@ const ContactForm = () => {
 
         if (name && email && message && phone) {
 
-            emailjs.sendForm('service_th07hao', 'template_mpyv7nk', form.current, 'Gdkhs9f-oEEJq9mtZ')
+            emailjs.sendForm('service_0l1vi0k', 'template_licq0s7', form.current, 'LXYnlMRSZPJuWCYq8')
                 .then((result) => {
                     console.log(result.text);
                     setFormSent(true);
-                    setAlertShow(true)
+                    setAlertShow(false)
                     EmptyFields();
                 }, (error) => {
                     console.log(error.text);

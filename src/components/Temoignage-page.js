@@ -36,8 +36,8 @@ export default function Temoignage() {
 
     const description1 = "Communication | bornes interactives"
     const description2 = "Formation | websérie-studio virtuel 3D"
-    const description3 = "Formation | PAMT avec motion capture"
-    const description4 = "Communication. | événement hybride"
+    const description3 = <span>Formation | transposition en <em>e-learning</em></span>
+    const description4 = "Communication | événement hybride"
     const description5 = "Formation | LMS avec tutoriels vidéo"
 
     const TemoignageComp = (props) => {

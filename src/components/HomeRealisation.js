@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Image1 from '../images/realisation/EnviroCompétences_Bornes_interactives.png'
-import Image2 from '../images/realisation/Desjardins_Force_E.png'
-import Image3 from '../images/realisation/Plasti_Hybride_avec_modélisation_3D.png'
-import Image4 from '../images/realisation/AQF_Plateforme_LMS.png'
-import Image5 from '../images/realisation/Loto-Québec_Vidéos_interactives.png'
-import Image6 from '../images/realisation/PlastiCompétences_PAMT_motion_capture.png'
-import Image7 from '../images/realisation/Bonduelle_plateforme-multimédia.png'
+import Image1 from '../images/realisation/enviroCompetences_realisation.jpg'
+import Image2 from '../images/realisation/Desjardins_Force_E.jpg'
+import Image3 from '../images/realisation/plasti_motion_realisation.jpg'
+import Image4 from '../images/realisation/aqf_realisation.jpg'
+import Image5 from '../images/realisation/loto_quebec_realisation.jpg'
+import Image6 from '../images/realisation/plasti_e_learning_realisation.jpg'
+import Image7 from '../images/realisation/bonduelle_palteforme_realisation.jpg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Slide from '@mui/material/Slide';
@@ -14,9 +14,9 @@ import { IconButton, Toolbar } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import LogoBlack from '../images/circle-black.png'
 import ContactForm from './ContactForm'
-import Image_mandat2 from '../images/mandats/Desjardins_Force_E.png'
-import Image_mandat4 from '../images/mandats/AQF_Plateforme_LMS.png'
-import Image_mandat5 from '../images/mandats/Loto-Québec_Vidéos_interactives.png'
+import Image_mandat2 from '../images/mandats/Desjardins_Force_E.jpg'
+import Image_mandat4 from '../images/mandats/AQF_Plateforme_LMS.jpg'
+import Image_mandat5 from '../images/mandats/loto_quebec_mandat.jpg'
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -81,7 +81,7 @@ export default function Realisation() {
         return (
             <>
                 <div>
-                    <img className='realisationImage' src={props.image}></img>
+                    <img className='realisationImage' src={props.image} alt={props.alt}></img>
                 </div>
                 <div className='realisationText'>
                     <div className='realisationDes'>{props.description}</div>
@@ -136,25 +136,31 @@ export default function Realisation() {
 
     const mandat1 = 'Promouvoir des métiers du secteur de l’environnement auprès des jeunes et des populations immigrées par l’intermédiaire de bornes interactives multimédia.'
     const mandat2 = 'Concevoir une stratégie de communication et un parcours de formation en ligne pour accompagner le lancement d’un nouveau CRM.'
-    const mandat3 = 'Transposer une formation en présentiel en formation e-learning.'
+    const mandat3 = 'Optimiser l’appropriation des PAMT traditionnels auprès des employés par l’intégration de capsules vidéo immersives.'
     const mandat4 = 'Transposer des formations présentielles du CQF en formation e-learning, et développer une plateforme LMS intégrant un catalogue de vente en ligne des formations.'
     const mandat5 = 'Mettre en place un guide d’accueil vidéo pour accueillir les nouveaux employés et leur transmettre une vision globale de l’entreprise, dans une approche créateur d’émotion.'
-    const mandat6 = 'Optimiser l’appropriation des PAMT traditionnels auprès des employés par l’intégration de capsules vidéo immersives.'
     const mandat7 = 'Animer et accompagner la gestion de changement liée au projet de rassembler en seul lieu trois sites de l’entreprise géographiquement distincts.'
+    const mandat6 = <span>Transposer une formation en présentiel en formation <em>e-learning.</em></span>
+    const alt1 = 'EnviroCompetences'
+    const alt2 = 'Desjardins'
+    const alt3 = 'Plasticompetence'
+    const alt4 = 'AQF'
+    const alt5 = 'Loto Quebec'
+    const alt6 = 'Plasticompetence'
+    const alt7 = 'Bonduelle'
 
     const defi1 = 'Valoriser des métiers peu connus ou mal perçus (préjugés négatifs). Créer une expérience immersive pour favoriser l’engagement des publics cibles vers les métiers de l’environnement.'
     const defi2 = 'Convaincre les employés à changer leurs habitudes de travail et à adopter le nouveau CRM.'
-    const defi3 =
+    const defi3 = 'Montrer les environnements de travail ainsi que les chaînes de production en usine pour faciliter l’apprentissage des nouveaux employés.'
+    const defi4 = "Adapter le contenu pédagogique en structure d'enseignement en ligne, en collaboration avec les formateurs et les experts de contenu du CQF."
+    const defi5 = 'Stimuler l’intérêt et l’engagement des nouveaux employés sur le positionnement de Loto-Québec, et présenter les différentes activités du groupe.'
+    const defi6 =
         <ul>
             <li>Trouver une solution face à l’impossibilité de se rendre dans les usines pour filmer les machines en raison de la pandémie
             </li>
             <li>Trouver une alternative engageante avec un budget et  des délais de livraison raisonnables</li>
         </ul>
-    const defi4 = "Adapter le contenu pédagogique en structure d'enseignement en ligne, en collaboration avec les formateurs et les experts de contenu du CQF."
-    const defi5 = 'Stimuler l’intérêt et l’engagement des nouveaux employés sur le positionnement de Loto-Québec, et présenter les différentes activités du groupe.'
-    const defi6 = 'Montrer les environnements de travail ainsi que les chaînes de production en usine pour faciliter l’apprentissage des nouveaux employés.'
     const defi7 = 'Engager les employés dans la mise en place et l’appropriation des changements structurels et organisationnels à venir.'
-
     const solutions1 =
         <ul>
             <li>Analyse des métiers pour créer des parcours de journées types</li>
@@ -170,12 +176,11 @@ export default function Realisation() {
             <li>Production d'une websérie avec Stéphane Bellavance pour sensibiliser le public cible sur l'importance de changer ses habitudes de travail en vue de l'adoption du nouveau CRM</li>
             <li>Programmation de capsules de formation en ligne pour faciliter l'aquisition des nouvelles fonctionnalités du nouveau CRM</li>
         </ul>
-    const solutions3 =
-        <ul>
-            <li>Modélisation 3D des machines</li>
-            <li>Conception d’un personnage-expert 3D créé avec la technologie <em>motion capture</em></li>
-            <li>Dynamisation du parcours grâce à la coanimation entre le formateur </li>
-        </ul>
+            const solutions3 =
+            <ul>
+                <li>Faire une analyse technopédagogique des PAMT avec des experts de contenu pour identifier les points d'apprentissage essentiels</li>
+                <li>Modéliser en animation 3D toutes les machines outils et leurs composantes pour créer une expérience immersive afin d'augmenter la compréhension des étapes de production et favoriser la mémorisation des acquis</li>
+            </ul>
     const solutions4 =
         <ul>
             <li>Conception d’un parcours de formation adapté à la formation en ligne</li>
@@ -190,10 +195,11 @@ export default function Realisation() {
             <li>Informative : pour donner une vision globale d’une entreprise aux activités multiples</li>
         </ul>
     const solutions6 =
-        <ul>
-            <li>Faire une analyse technopédagogique des PAMT avec des experts de contenu pour identifier les points d'apprentissage essentiels</li>
-            <li>Modéliser en animation 3D toutes les machines outils et leurs composantes pour créer une expérience immersive afin d'augmenter la compréhension des étapes de production et favoriser la mémorisation des acquis</li>
-        </ul>
+    <ul>
+        <li>Modélisation 3D des machines</li>
+        <li>Conception d’un personnage-expert 3D créé avec la technologie <em>motion capture</em></li>
+        <li>Dynamisation du parcours grâce à la coanimation entre le formateur </li>
+    </ul>
     const solutions7 =
         <ul>
             <li>Développement d’une plateforme de communication multimédia</li>
@@ -252,42 +258,42 @@ export default function Realisation() {
                     <div className='realisationTitleQuery'>
                         <p >Quelques réalisations</p>
                         <div className='row'>
-                            <div className='col-12 col-lg-6'>
+                            <div className='col-12 col-sm-6 col-lg-6'>
                                 <div className='realisation'>
-                                    <RealisationComp image={Image1} description={description1} client={client1} click={handleClickOpen1} />
+                                    <RealisationComp image={Image1} alt={alt1} description={description1} client={client1} click={handleClickOpen1} />
+                                </div>
+                                <div className='graySectionQuery graySectionResponsive'></div>
+                            </div>
+                            <div className='col-12 col-sm-6 col-lg-6'>
+                                <div className='realisation'>
+                                    <RealisationComp image={Image2} alt={alt2} description={description2} client={client2} click={handleClickOpen2} />
+                                </div>
+                            </div>
+                            <div className='col-12 col-sm-6 col-lg-6'>
+                                <div className='realisation'>
+                                    <RealisationComp image={Image3} alt={alt3} description={description3} client={client3} click={handleClickOpen3} />
+                                </div>
+                                <div className='graySectionQuery graySectionResponsive'></div>
+                            </div>
+                            <div className='col-12 col-sm-6 col-lg-6'>
+                                <div className='realisation'>
+                                    <RealisationComp image={Image4} alt={alt4} description={description4} client={client4} click={handleClickOpen4} />
+                                </div>
+                            </div>
+                            <div className='col-12 col-sm-6 col-lg-6'>
+                                <div className='realisation'>
+                                    <RealisationComp image={Image5} alt={alt5} description={description5} client={client5} click={handleClickOpen5} />
                                 </div>
                                 <div className='graySectionQuery'></div>
                             </div>
-                            <div className='col-12 col-lg-6'>
+                            <div className='col-12 col-sm-6 col-lg-6'>
                                 <div className='realisation'>
-                                    <RealisationComp image={Image2} description={description2} client={client2} click={handleClickOpen2} />
-                                </div>
-                            </div>
-                            <div className='col-12 col-lg-6'>
-                                <div className='realisation'>
-                                    <RealisationComp image={Image3} description={description3} client={client3} click={handleClickOpen3} />
-                                </div>
-                                <div className='graySectionQuery'></div>
-                            </div>
-                            <div className='col-12 col-lg-6'>
-                                <div className='realisation'>
-                                    <RealisationComp image={Image4} description={description4} client={client4} click={handleClickOpen4} />
-                                </div>
-                            </div>
-                            <div className='col-12 col-lg-6'>
-                                <div className='realisation'>
-                                    <RealisationComp image={Image5} description={description5} client={client5} click={handleClickOpen5} />
-                                </div>
-                                <div className='graySectionQuery'></div>
-                            </div>
-                            <div className='col-12 col-lg-6'>
-                                <div className='realisation'>
-                                    <RealisationComp image={Image6} description={description6} client={client6} click={handleClickOpen6} />
+                                    <RealisationComp image={Image6} alt={alt6} description={description6} client={client6} click={handleClickOpen6} />
                                 </div>
                             </div>
                             <div className='col-12'>
                                 <div className='realisation'>
-                                    <RealisationComp image={Image7} description={description7} client={client7} click={handleClickOpen7} />
+                                    <RealisationComp image={Image7} alt={alt7} description={description7} client={client7} click={handleClickOpen7} />
                                 </div>
                             </div>
                         </div>
@@ -295,7 +301,7 @@ export default function Realisation() {
                     <div>
                         <div id='realisationEndingQuery'>
                             Voir d'autres réalisations
-                            <a href='/realisation'>
+                            <a href='/realisations'>
                                 <div className="round">
                                     <div id="arrowContainer">
                                         <span className="arrow primary next "></span>
