@@ -2811,11 +2811,29 @@ textarea {
   #itemOne {
     margin-top: 70px;
   }
+  
+    .agenceButtomSectionTxtWrapper {
+      width: 288px;
+      text-align: left;
+    }
+
+    .agenceButtomSectionTxt {
+      align-items: flex-start;
+      margin-top: 5px;
+    }
+
+    .algegoLogoSmall {
+      margin-top: 5px;
+    }
 }
 
 @media only screen and (max-width:375px) {
 
   .upTypeWriterContainer .Typewriter {
     font-size: 1.1rem;
+  }
+
+  .agenceImgRow {
+    background-image: none;
   }
 }
