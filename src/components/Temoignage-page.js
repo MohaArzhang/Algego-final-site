@@ -45,7 +45,7 @@ export default function Temoignage() {
             <>
                 <div className="temoigangeResponsive">
                     <div className="temoignageCard">
-                        <iframe src={props.link} width="351" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={props.title}></iframe>
+                        <iframe src={props.link} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={props.title}></iframe>
                         <div className="temoigangeImage">
                             <img src={props.image} alt={props.alt}></img>
                         </div>
@@ -88,7 +88,7 @@ export default function Temoignage() {
                                 className="col-xl-4 col-lg-6 temoignageCol temoignageRowUp">
                                 <div className="temoigangeResponsive">
                                     <div className="temoignageCard temoignageRowUpLeft">
-                                        <iframe src={link1} width="351" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title1}></iframe>
+                                        <iframe src={link1} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title1}></iframe>
                                         <div className="temoigangeImage">
                                             <img src={Enviro} alt={alt1}></img>
                                         </div>
@@ -105,7 +105,7 @@ export default function Temoignage() {
                                 data-aos-once="true"
                                 className="col-xl-4 col-lg-6 temoignageCol temoignageRowUp">
                                 <div className="temoignageCard temoignageRowUpRight">
-                                    <iframe src={link2} width="351" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title2}></iframe>
+                                    <iframe src={link2} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title2}></iframe>
                                     <div className="temoigangeImage">
                                         <img src={Desjardins} alt={alt2}></img>
                                     </div>
@@ -132,7 +132,7 @@ export default function Temoignage() {
                                 className="col-lg-6">
                                 <div className="temoigangeResponsive">
                                 <div className="temoignageCard temoignageCardLeft">
-                                        <iframe src={link4} width="351" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title4}></iframe>
+                                        <iframe src={link4} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title4}></iframe>
                                         <div className="temoigangeImage">
                                             <img src={CQF} alt={alt4}></img>
                                         </div>
@@ -150,7 +150,7 @@ export default function Temoignage() {
                                 className="col-lg-6">
                                 <div className="temoigangeResponsive">
                                 <div className="temoignageCard temoignageCardRight">
-                                        <iframe src={link5} width="351" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title5}></iframe>
+                                        <iframe src={link5} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title5}></iframe>
                                         <div className="temoigangeImage">
                                             <img src={BIXI} alt={alt5}></img>
                                         </div>

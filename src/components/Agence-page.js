@@ -23,10 +23,12 @@ export default function AgencePage() {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-xl-6 agenceHeaderLeft">
-                        Dans la Vie,<br />
-                        il n’y a pas de hasards :<br />
-                        il n’y a que des rendez-vous…<br /><br />
-                        – Paul Éluard
+                        <div>
+                            Dans la Vie,<br />
+                            il n’y a pas de hasards :<br />
+                            il n’y a que des rendez-vous…<br />
+                        </div>
+                        <div>– Paul Éluard</div>
                     </div>
                     <div className="col-xl-6 agenceHeaderRight">
                         <div>
@@ -50,10 +52,12 @@ export default function AgencePage() {
                 </div>
                 <div className="agenceTitle">
                     <h1>
-                        LA VIE EST TROP COURTE POUR
+                        {/* LA VIE EST TROP COURTE POUR */}
+                        La vie est trop courte
                     </h1>
                     <h1>
-                        SE PRENDRE AU SÉRIEUX !
+                        {/* SE PRENDRE AU SÉRIEUX ! */}
+                        pour se prendre au sérieux !
                     </h1>
                 </div>
                 <div className="agenceSubTitle">

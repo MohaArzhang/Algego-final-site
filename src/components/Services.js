@@ -26,7 +26,7 @@ const longDescriptionCommunication =
     <p>Nous déployons des <strong>stratégies multimédia innovantes</strong> pour dynamiser vos communications internes et externes, et accompagner la gestion du changement.</p>
 
 const longDescriptionMultimedia =
-    <p>Que ce soit pour vos projets de <strong>formation </strong>, de <strong>communication </strong>ou pour des <strong>événements corporatifs haut de gamme </strong>, le <strong>multimédia </strong>est toujours intégré dans nos solutions <strong>innovantes</strong>.</p>
+    <p>Que ce soit pour vos projets de <strong>formation</strong>, de <strong>communication </strong>ou pour des <strong>événements haut de gamme</strong>, le <strong>multimédia </strong>est toujours intégré dans nos solutions <strong>innovantes</strong>.</p>
 
 function Services() {
     AOS.init();

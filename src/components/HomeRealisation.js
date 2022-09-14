@@ -129,7 +129,7 @@ export default function Realisation() {
     const link1 = <iframe src="https://player.vimeo.com/video/678893128?h=fd32598d78&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
     const link2 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat2} width="565" />
     const link3 = <iframe src="https://player.vimeo.com/video/563706535?h=6348db9387&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link4 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat4} width="565" alt='AQF'/>
+    const link4 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat4} width="565" alt='AQF' />
     const link5 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat5} width="565" alt='Loto Quebec' />
     const link6 = <iframe src="https://player.vimeo.com/video/553482930?h=be7535dd1d" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NOBIS"></iframe>
     const link7 = <iframe src="https://player.vimeo.com/video/408662085?h=2e784450bb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
@@ -176,11 +176,11 @@ export default function Realisation() {
             <li>Production d'une websérie avec Stéphane Bellavance pour sensibiliser le public cible sur l'importance de changer ses habitudes de travail en vue de l'adoption du nouveau CRM</li>
             <li>Programmation de capsules de formation en ligne pour faciliter l'aquisition des nouvelles fonctionnalités du nouveau CRM</li>
         </ul>
-            const solutions3 =
-            <ul>
-                <li>Faire une analyse technopédagogique des PAMT avec des experts de contenu pour identifier les points d'apprentissage essentiels</li>
-                <li>Modéliser en animation 3D toutes les machines outils et leurs composantes pour créer une expérience immersive afin d'augmenter la compréhension des étapes de production et favoriser la mémorisation des acquis</li>
-            </ul>
+    const solutions3 =
+        <ul>
+            <li>Faire une analyse technopédagogique des PAMT avec des experts de contenu pour identifier les points d'apprentissage essentiels</li>
+            <li>Modéliser en animation 3D toutes les machines outils et leurs composantes pour créer une expérience immersive afin d'augmenter la compréhension des étapes de production et favoriser la mémorisation des acquis</li>
+        </ul>
     const solutions4 =
         <ul>
             <li>Conception d’un parcours de formation adapté à la formation en ligne</li>
@@ -195,11 +195,11 @@ export default function Realisation() {
             <li>Informative : pour donner une vision globale d’une entreprise aux activités multiples</li>
         </ul>
     const solutions6 =
-    <ul>
-        <li>Modélisation 3D des machines</li>
-        <li>Conception d’un personnage-expert 3D créé avec la technologie <em>motion capture</em></li>
-        <li>Dynamisation du parcours grâce à la coanimation entre le formateur </li>
-    </ul>
+        <ul>
+            <li>Modélisation 3D des machines</li>
+            <li>Conception d’un personnage-expert 3D créé avec la technologie <em>motion capture</em></li>
+            <li>Dynamisation du parcours grâce à la coanimation entre le formateur </li>
+        </ul>
     const solutions7 =
         <ul>
             <li>Développement d’une plateforme de communication multimédia</li>
@@ -259,40 +259,75 @@ export default function Realisation() {
                         <p >Quelques réalisations</p>
                         <div className='row'>
                             <div className='col-12 col-sm-6 col-lg-6'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay=''
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image1} alt={alt1} description={description1} client={client1} click={handleClickOpen1} />
                                 </div>
                                 <div className='graySectionQuery graySectionResponsive'></div>
                             </div>
                             <div className='col-12 col-sm-6 col-lg-6'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay='200'
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image2} alt={alt2} description={description2} client={client2} click={handleClickOpen2} />
                                 </div>
                             </div>
                             <div className='col-12 col-sm-6 col-lg-6'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay=''
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image3} alt={alt3} description={description3} client={client3} click={handleClickOpen3} />
                                 </div>
                                 <div className='graySectionQuery graySectionResponsive'></div>
                             </div>
                             <div className='col-12 col-sm-6 col-lg-6'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay='200'
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image4} alt={alt4} description={description4} client={client4} click={handleClickOpen4} />
                                 </div>
                             </div>
                             <div className='col-12 col-sm-6 col-lg-6'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay=''
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image5} alt={alt5} description={description5} client={client5} click={handleClickOpen5} />
                                 </div>
                                 <div className='graySectionQuery'></div>
                             </div>
                             <div className='col-12 col-sm-6 col-lg-6'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay='200'
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image6} alt={alt6} description={description6} client={client6} click={handleClickOpen6} />
                                 </div>
                             </div>
                             <div className='col-12'>
-                                <div className='realisation'>
+                                <div
+                                    data-aos='zoom-in'
+                                    data-aos-duration='1200'
+                                    data-aos-delay=''
+                                    data-aos-once="true"
+                                    className='realisation'>
                                     <RealisationComp image={Image7} alt={alt7} description={description7} client={client7} click={handleClickOpen7} />
                                 </div>
                             </div>
