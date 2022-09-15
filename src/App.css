@@ -1973,6 +1973,7 @@ textarea {
 @media only screen and (max-width:1000px) {
 
   .logoImageShow,
+  .logoImageHide,
   .logoImageShowMenu {
     width: 11rem;
   }
