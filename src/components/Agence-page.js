@@ -108,7 +108,7 @@ export default function AgencePage() {
                                         </a>
                                     </div>
                                 </div>
-                                <div className="agencePersonTag"><div>#cerveau-à-moto</div></div>
+                                <div className="agencePersonTag"><div>#être-ou-ne-pas-être</div></div>
                             </div>
                         </div>
                     </div>
