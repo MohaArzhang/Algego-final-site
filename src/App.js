@@ -16,23 +16,11 @@ const App = () => {
       <div className='App'>
         <Routes>
           <Route path='/' element={<Home />} />
-        </Routes>
-        <Routes>
           <Route path='/home' element={<HomeWithoutLogo />} />
-        </Routes>
-        <Routes>
           <Route path='/realisations' element={<RealisationPage />} />
-        </Routes>
-        <Routes>
           <Route path='/agence' element={<AgencePage />} />
-        </Routes>
-        <Routes>
           <Route path='/contactus' element={<ContactUs />} />
-        </Routes>
-        <Routes>
           <Route path='/temoignage' element={<Temoignage />} />
-        </Routes>
-        <Routes>
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
         <div>

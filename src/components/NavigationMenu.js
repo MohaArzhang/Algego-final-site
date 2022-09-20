@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import LogoImage from '../images/logo-noir.png'
 
-function NavigationRealisation(props) {
+
+function NavigationMenu(props) {
     const [showLogo, setShowLogo] = useState(true)
     const imageShow = showLogo ? 'logoImageShowMenu' : 'logoImageHide'
 
@@ -67,7 +68,9 @@ function NavigationRealisation(props) {
             {NavSection}
             {Menu}
         </div>
+
     )
 }
+console.log('this is page nav menu');
 
-export default NavigationRealisation
+export default NavigationMenu
