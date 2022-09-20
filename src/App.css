@@ -1591,7 +1591,7 @@ textarea {
 
 @media only screen and (max-width: 1180px),
 (max-height: 820px) {
-  /* .graySectionQuery {
+  .graySectionQuery {
     height: 694px;
   }
 
@@ -1616,7 +1616,7 @@ textarea {
 
   .hamShow::after {
     top: 4.2rem;
-  } */
+  }
 }
 
 @media only screen and (max-width: 1180px) {
