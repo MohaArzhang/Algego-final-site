@@ -1543,6 +1543,15 @@ textarea {
 
 /* Temoigange end */
 
+
+/* Not Found page */
+.error {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Media query */
 
 @media only screen and (max-height: 820px) {

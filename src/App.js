@@ -8,6 +8,7 @@ import AgencePage from './components/Agence-page'
 import ContactUs from './components/ContactUs-page'
 import Temoignage from './components/Temoignage-page'
 import HomeWithoutLogo from './components/HomeWithotLogo'
+import NotFoundPage from './components/NotFoundPage'
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
         </Routes>
         <Routes>
           <Route path='/temoignage' element={<Temoignage />} />
+        </Routes>
+        <Routes>
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
         <div>
           <Footer />
