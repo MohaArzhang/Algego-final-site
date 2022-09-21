@@ -154,7 +154,8 @@
 }
 
 .hamBack:hover .hamShow,
-.hamBackMenu:hover .hamShowMenu {
+.hamBackMenu:hover .hamShowMenu,
+.hamBack:hover .hamColor {
   right: 4rem;
 }
 
