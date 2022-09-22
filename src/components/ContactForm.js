@@ -73,7 +73,7 @@ const ContactForm = () => {
     return (
         <>
             <div className={alertShow === true ? 'showMessage' : 'hideMessage'}>
-                <Alert type="error" message="Merci de compléter tous les champs." />
+                <Alert type="error" message="Merci de remplir tous les champs." />
             </div>
             <div className={formSent === true ? 'showMessage' : 'hideMessage'}>
                 <Alert type="success">
