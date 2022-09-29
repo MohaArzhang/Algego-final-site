@@ -126,11 +126,19 @@ export default function Realisation() {
     const dialogSub6 = 'PlastiCompétences'
     const dialogSub7 = 'Bonduelle'
 
+    const alt1 = 'EnviroCompétences'
+    const alt2 = 'Desjardins'
+    const alt3 = 'PlastiCompétence'
+    const alt4 = 'AQF'
+    const alt5 = 'Loto Quebec'
+    const alt6 = 'PlastiCompétence'
+    const alt7 = 'Bonduelle'
+
     const link1 = <iframe src="https://player.vimeo.com/video/678893128?h=fd32598d78&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link2 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat2} width="565" />
+    const link2 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat2} alt={alt2} width="565" />
     const link3 = <iframe src="https://player.vimeo.com/video/563706535?h=6348db9387&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link4 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat4} width="565" alt='AQF' />
-    const link5 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat5} width="565" alt='Loto Quebec' />
+    const link4 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat4} width="565" alt={alt4} />
+    const link5 = <img className='dialogImg' style={{ marginTop: '50px', marginBottom: '50px' }} src={Image_mandat5} width="565" alt={alt5} />
     const link6 = <iframe src="https://player.vimeo.com/video/553482930?h=be7535dd1d" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NOBIS"></iframe>
     const link7 = <iframe src="https://player.vimeo.com/video/408662085?h=2e784450bb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
 
@@ -141,13 +149,6 @@ export default function Realisation() {
     const mandat5 = 'Mettre en place un guide d’accueil vidéo pour accueillir les nouveaux employés et leur transmettre une vision globale de l’entreprise, dans une approche créateur d’émotion.'
     const mandat7 = 'Animer et accompagner la gestion de changement liée au projet de rassembler en seul lieu trois sites de l’entreprise géographiquement distincts.'
     const mandat6 = <span>Transposer une formation en présentiel en formation <em>e-learning.</em></span>
-    const alt1 = 'EnviroCompetences'
-    const alt2 = 'Desjardins'
-    const alt3 = 'Plasticompetence'
-    const alt4 = 'AQF'
-    const alt5 = 'Loto Quebec'
-    const alt6 = 'Plasticompetence'
-    const alt7 = 'Bonduelle'
 
     const defi1 = 'Valoriser des métiers peu connus ou mal perçus (préjugés négatifs). Créer une expérience immersive pour favoriser l’engagement des publics cibles vers les métiers de l’environnement.'
     const defi2 = 'Convaincre les employés à changer leurs habitudes de travail et à adopter le nouveau CRM.'
@@ -230,7 +231,7 @@ export default function Realisation() {
                 <div className='dialogDescription'>{props.defi}</div>
                 <div className='dialogDescription dialogDescriptionTitle'>Solutions</div>
                 <div className='dialogDescription'>{props.solutions}</div>
-                <div className='categoryImg'><img src={LogoBlack} alt='logo' />{props.category}</div>
+                <div className='categoryImg'><img src={LogoBlack} alt='Logo ALGEGO' />{props.category}</div>
                 <div className='accordion' id="dialogAccordion">
                     <div className="card">
                         <div className="card-header" id="headingTwo">

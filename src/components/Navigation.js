@@ -62,7 +62,7 @@ function Navigation(props) {
         <div>
           <div className='navbar'>
             <div>
-              <img className={imageShow} src={LogoImage} />
+              <img className={imageShow} src={LogoImage} alt='Logo ALGEGO'/>
             </div>
             <div className='hamBack' onClick={() => props.setShowMenu(!props.showMenu)}>
               <div className={hamburger}>

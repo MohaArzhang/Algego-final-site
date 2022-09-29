@@ -220,18 +220,34 @@ export default function AllRealisations() {
     const dialogSub14 = 'Résidences Floralies'
     const dialogSub15 = 'Bonduelle'
 
+    const alt1 = 'EnviroCompétences'
+    const alt2 = 'Desjardins'
+    const alt3 = 'Plasticompetence'
+    const alt4 = 'AQF'
+    const alt5 = 'Loto Quebec'
+    const alt6 = 'Plasticompetence'
+    const alt7 = 'Bonduelle'
+    const alt8 = 'BIXI'
+    const alt9 = 'Desjardins'
+    const alt10 = 'Barreau'
+    const alt11 = 'CQF'
+    const alt12 = 'AMCQF'
+    const alt13 = 'Riopelle'
+    const alt14 = 'Maison Floralies'
+    const alt15 = 'Bonduelle'
+
     const link1 = <iframe src="https://player.vimeo.com/video/678893128?h=fd32598d78&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link2 = <img className='dialogImg' src={Image_mandat2} width="565" />
+    const link2 = <img className='dialogImg' src={Image_mandat2} alt={alt2} width="565" />
     const link3 = <iframe src="https://player.vimeo.com/video/563706535?h=6348db9387&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link4 = <img className='dialogImg' src={Image_mandat4} width="565" />
-    const link5 = <img className='dialogImg' src={Image_mandat5} width="565" />
+    const link4 = <img className='dialogImg' src={Image_mandat4} alt={alt4} width="565" />
+    const link5 = <img className='dialogImg' src={Image_mandat5} alt={alt5} width="565" />
     const link6 = <iframe src="https://player.vimeo.com/video/553482930?h=be7535dd1d" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="NOBIS"></iframe>
     const link7 = <iframe src="https://player.vimeo.com/video/408662085?h=2e784450bb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
-    const link8 = <img className='dialogImg' src={Image_mandat8} width="565" />
+    const link8 = <img className='dialogImg' src={Image_mandat8} alt={alt8} width="565" />
     const link9 = <iframe src="https://player.vimeo.com/video/296545782?h=92c853ce9b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
     const link10 = <iframe src="https://player.vimeo.com/video/559765735?h=4934f1725b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay" title=""></iframe>
     const link11 = <iframe className='dialogImg' src="https://dj5ag5n6bpdxo.cloudfront.net/experience/S2Drl5l" width="560" height="315" frameborder="0" allow="autoplay" title=""></iframe>
-    const link12 = <img className='dialogImg' src={Image_mandat12} width="565" />
+    const link12 = <img className='dialogImg' src={Image_mandat12} alt={alt12} width="565" />
     const link13 = <iframe src="https://player.vimeo.com/video/654168302?h=90fdaf7f73&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
     const link14 = <iframe src="https://player.vimeo.com/video/641487272?h=a519f8443d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Desjardins Assurances"></iframe>
     const link15 = <iframe src="https://player.vimeo.com/video/746225971?h=1c83dd1e65&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bonduelle"></iframe>
@@ -251,22 +267,6 @@ export default function AllRealisations() {
     const mandat13 = 'Présenter les activités du centenaire lors de la conférence de presse du Centenaire RIOPELLE.'
     const mandat14 = 'Faire vivre une expérience immersive aux utilisateurs pour leur faire découvrir la vie des résidents et des professionnels des Résidences Floralies.'
     const mandat15 = 'Sensibiliser les employés aux nouvelles règles de vie.'
-
-    const alt1 = 'EnviroCompetences'
-    const alt2 = 'Desjardins'
-    const alt3 = 'Plasticompetence'
-    const alt4 = 'AQF'
-    const alt5 = 'Loto Quebec'
-    const alt6 = 'Plasticompetence'
-    const alt7 = 'Bonduelle'
-    const alt8 = 'BIXI'
-    const alt9 = 'Desjardins'
-    const alt10 = 'Barreau'
-    const alt11 = 'CQF'
-    const alt12 = 'AMCQF'
-    const alt13 = 'Riopelle'
-    const alt14 = 'Maison Floralies'
-    const alt15 = 'Bonduelle'
 
     const defi1 = 'Valoriser des métiers peu connus ou mal perçus (préjugés négatifs). Créer une expérience immersive pour favoriser l’engagement des publics cibles vers les métiers de l’environnement.'
     const defi2 = 'Convaincre les employés à changer leurs habitudes de travail et à adopter le nouveau CRM.'

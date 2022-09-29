@@ -1,5 +1,5 @@
 import NavigationMenu from "./NavigationMenu"
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import RealisationTypeWriter from './RealisationTypeWriter'
 import Contact from "./Contact"
 import Clients from "./Clients"
@@ -9,6 +9,11 @@ import AllRealisations from "./AllRealisations"
 
 
 export default function RealisationPage() {
+
+    useEffect(() => {
+        document.title = "Réalisations - ALGEGO";  
+      }, []);
+
     AOS.init();
 
     const [showMenu, setShowMenu] = useState(false);

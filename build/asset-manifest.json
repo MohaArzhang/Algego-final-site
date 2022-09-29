@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.65523586.css",
-    "main.js": "/static/js/main.5af7b3be.js",
+    "main.js": "/static/js/main.12c4c74e.js",
     "static/js/787.e60a8016.chunk.js": "/static/js/787.e60a8016.chunk.js",
     "static/media/video_page_accueil_finale.mp4": "/static/media/video_page_accueil_finale.d1b00ed97b7a0a50b727.mp4",
     "static/media/contact-header-image.png": "/static/media/contact-header-image.07b1712da84b73083fe4.png",
@@ -31,7 +31,7 @@
     "static/media/enviro.png": "/static/media/enviro.906e63aa14ab03d9faa9.png",
     "static/media/amcq_realisation.jpg": "/static/media/amcq_realisation.51590df9bcaaa294d08f.jpg",
     "static/media/Julie_color.jpg": "/static/media/Julie_color.4093afb0308253e560bb.jpg",
-    "static/media/lotto.png": "/static/media/lotto.7556aa779bc76a1d7f1c.png",
+    "static/media/loto.png": "/static/media/loto.7556aa779bc76a1d7f1c.png",
     "static/media/plasti_e_learning_realisation.jpg": "/static/media/plasti_e_learning_realisation.bc1c0929b116588aa449.jpg",
     "static/media/Moha_color.jpg": "/static/media/Moha_color.2ae3bf4502b5fbd13cbd.jpg",
     "static/media/barreau_realisation.jpg": "/static/media/barreau_realisation.9f6e7a95dd6e5f2d6d27.jpg",
@@ -69,11 +69,11 @@
     "static/media/envelope.png": "/static/media/envelope.1b8b8b8176ba435eeac4.png",
     "index.html": "/index.html",
     "main.65523586.css.map": "/static/css/main.65523586.css.map",
-    "main.5af7b3be.js.map": "/static/js/main.5af7b3be.js.map",
+    "main.12c4c74e.js.map": "/static/js/main.12c4c74e.js.map",
     "787.e60a8016.chunk.js.map": "/static/js/787.e60a8016.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65523586.css",
-    "static/js/main.5af7b3be.js"
+    "static/js/main.12c4c74e.js"
   ]
 }

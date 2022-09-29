@@ -6,7 +6,7 @@ const ServicesComp = (props) => {
     return (
         <div className='serviceWrapper'>
             <div id='circleAndLetter'>
-                <img className='circleImage' src={Circle} />
+                <img className='circleImage' src={Circle} alt='Logo ALGEGO'/>
                 <div className='letterInCircle'>{props.letter}</div>
             </div>
             <div className='shortDescription'><p>{props.shortDescription1}</p><p>{props.shortDescription}</p></div>

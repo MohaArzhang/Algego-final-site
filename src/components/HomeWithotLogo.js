@@ -1,5 +1,5 @@
 import MidTypeWriter from '../components/MidTypeWriter'
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Services from '../components/Services'
 import EndTypeWriter from '../components/EndTypeWriter';
@@ -11,6 +11,11 @@ import Navigation from '../components/Navigation';
 import { useLocation } from 'react-router-dom';
 
 export default function HomeWithoutLogo() {
+
+    useEffect(() => {
+        document.title = "Page d'accueil - ALGEGO";  
+      }, []);
+
     const location = useLocation
     const PageNameClass = location.pathname === '/' ? 'afterHeaderWrapper' : 'afterHeaderWrapperNoDelay'
     const [showMenu, setShowMenu] = useState(false)

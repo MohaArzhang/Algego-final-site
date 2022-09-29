@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavigationMenu from './NavigationMenu';
 import Envelope from '../images/envelope.png';
 import Phone from '../images/phone.png';
 import ContactPopUp from './ContactForm';
 
 const ContactUs = () => {
+
+    useEffect(() => {
+        document.title = "Jasons ensemble - ALGEGO";  
+      }, []);
+
     const [showMenu, setShowMenu] = useState(false);
     return (
         <>
@@ -21,8 +26,8 @@ const ContactUs = () => {
                             <p>3970, rue Saint-Ambroise</p>
                             <p>Montréal, QC H4C 2C7</p>
                             <br></br>
-                            <div><img src={Phone} alt='Téléphone' />(514) 360-7711</div>
-                            <div><img src={Envelope} alt='Courriel' />info@algego.com</div>
+                            <div><img src={Phone} alt='Téléphone logo'/>(514) 360-7711</div>
+                            <div><img src={Envelope} alt='Courriel logo' />info@algego.com</div>
                         </div>
                     </div>
                     <div className='col-xl-6'>

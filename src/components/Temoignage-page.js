@@ -1,5 +1,5 @@
 import NavigationMenu from "./NavigationMenu"
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TemoignageTypeWriter from './TemoignageTypeWriter'
 import Desjardins from '../images/Logos/desjardins.png'
 import Enviro from '../images/Logos/enviro.png'
@@ -12,6 +12,11 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export default function Temoignage() {
+
+    useEffect(() => {
+        document.title = "Témoignage - ALGEGO";  
+      }, []);
+
     AOS.init();
 
     const [showMenu, setShowMenu] = useState(false);

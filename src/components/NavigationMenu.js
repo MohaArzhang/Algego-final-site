@@ -37,7 +37,7 @@ function NavigationMenu(props) {
                 <div>
                     <div className='navbar'>
                         <div>
-                            <a href='/home'><img className={imageShow} src={LogoImage} /></a>
+                            <a href='/home'><img className={imageShow} src={LogoImage} alt='Logo ALGEGO'/></a>
                         </div>
                         <div className='hamBackMenu' onClick={() => props.setShowMenu(!props.showMenu)}>
                             <div className={hamburger}>

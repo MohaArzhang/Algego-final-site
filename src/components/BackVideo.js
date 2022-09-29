@@ -29,7 +29,7 @@ export default function BackVideo() {
         >
           <source src={Teaser} type='video/mp4' />
         </video>
-        <img className='secondHeadBack' style={{ objectFit: 'contain', width: '100vw' }} src={HeaderImage}></img>
+        <img className='secondHeadBack' style={{ objectFit: 'contain', width: '100vw' }} src={HeaderImage} alt='Header Image'></img>
       </div>
     </>
   )

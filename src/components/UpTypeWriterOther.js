@@ -21,7 +21,7 @@ function UpTypeWriterTwo() {
               .start();
           }}
         />
-        <div className="firstButton"><a href="/Temoignage">Ce que disent nos clients<img src={Play}></img></a></div>
+        <div className="firstButton"><a href="/Temoignage">Ce que disent nos clients<img src={Play} alt='Play icon'></img></a></div>
       </div>
     </>
   );

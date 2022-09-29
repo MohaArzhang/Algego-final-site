@@ -12,7 +12,7 @@ import Floralies from '../images/Logos/floralies.png'
 import Giant from '../images/Logos/giant.png'
 import Hema from '../images/Logos/hema.png'
 import Ikea from '../images/Logos/ikea.png'
-import Lotto from '../images/Logos/lotto.png'
+import Loto from '../images/Logos/loto.png'
 import Maillon from '../images/Logos/maillon.png'
 import Moet from '../images/Logos/moet.png'
 import Notaires from '../images/Logos/notaires.png'
@@ -33,28 +33,28 @@ const responsive = {
 };
 
 const items = [
-  <img src={AMCQ} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={AMS} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Barreau} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Bell} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Bixi} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Bonduelle} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Concordia} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={CQF} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Desjardins} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Enviro} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Floralies} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Giant} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Hema} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Ikea} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Lotto} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Maillon} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Moet} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Notaires} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={OPDQ} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Plasti} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Riopelle} className="clientImage" onDragStart={handleDragStart} />,
-  <img src={Wolff} className="clientImage" onDragStart={handleDragStart} />,
+  <img src={AMCQ} className="clientImage" onDragStart={handleDragStart} alt="AMCQ" />,
+  <img src={AMS} className="clientImage" onDragStart={handleDragStart} alt="AMS"/>,
+  <img src={Barreau} className="clientImage" onDragStart={handleDragStart} alt="Barreau"/>,
+  <img src={Bell} className="clientImage" onDragStart={handleDragStart} alt="Bell"/>,
+  <img src={Bixi} className="clientImage" onDragStart={handleDragStart} alt="Bixi"/>,
+  <img src={Bonduelle} className="clientImage" onDragStart={handleDragStart} alt="Bonduelle"/>,
+  <img src={Concordia} className="clientImage" onDragStart={handleDragStart} alt="Université Concordia"/>,
+  <img src={CQF} className="clientImage" onDragStart={handleDragStart} alt="CQF"/>,
+  <img src={Desjardins} className="clientImage" onDragStart={handleDragStart} alt="Desjardins"/>,
+  <img src={Enviro} className="clientImage" onDragStart={handleDragStart} alt="EnviroCompétences"/>,
+  <img src={Floralies} className="clientImage" onDragStart={handleDragStart} alt="Résidences Floralies"/>,
+  <img src={Giant} className="clientImage" onDragStart={handleDragStart} alt="Giant inc"/>,
+  <img src={Hema} className="clientImage" onDragStart={handleDragStart} alt="Héma-Québec"/>,
+  <img src={Ikea} className="clientImage" onDragStart={handleDragStart} alt="IKEA"/>,
+  <img src={Loto} className="clientImage" onDragStart={handleDragStart} alt="Loto Québec"/>,
+  <img src={Maillon} className="clientImage" onDragStart={handleDragStart} alt="Maillon d'Or"/>,
+  <img src={Moet} className="clientImage" onDragStart={handleDragStart} alt="Moët Hennessy"/>,
+  <img src={Notaires} className="clientImage" onDragStart={handleDragStart} alt="Chambre des notaires"/>,
+  <img src={OPDQ} className="clientImage" onDragStart={handleDragStart} alt="OPDQ"/>,
+  <img src={Plasti} className="clientImage" onDragStart={handleDragStart} alt="PlastiCompétences"/>,
+  <img src={Riopelle} className="clientImage" onDragStart={handleDragStart} alt="Fondation Riopelle"/>,
+  <img src={Wolff} className="clientImage" onDragStart={handleDragStart} alt="Wolff e-bikes"/>,
 ];
 
 const Clients = () => {

@@ -1,5 +1,5 @@
 import NavigationMenu from "./NavigationMenu"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Envelope from '../images/envelope.png'
 import AlgegoCircle from '../images/circle.png'
 import Daniel from '../images/agence/Daniel.jpg'
@@ -14,6 +14,11 @@ import Moha from '../images/agence/Moha.jpg'
 import MohaColor from '../images/agence/Moha_color.jpg'
 
 export default function AgencePage() {
+
+    useEffect(() => {
+        document.title = "Agence - ALGEGO";  
+      }, []);
+
     const [showMenu, setShowMenu] = useState(false);
     return (
         <>
@@ -68,10 +73,10 @@ export default function AgencePage() {
                 <div className="row">
                     <div className="col-xl-6 col-md-6 agenceImgRow agenceImgRowUp">
                         <div className="agenceImageBW daniel">
-                            <img src={Daniel} />
+                            <img src={Daniel} alt="Daniel Dõ"/>
                         </div>
                         <div className="agenceImageColor daniel">
-                            <img src={DanielColor} />
+                            <img src={DanielColor} alt="Daniel Dõ"/>
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -91,10 +96,10 @@ export default function AgencePage() {
                     </div>
                     <div className="col-xl-6 col-md-6 agenceImgRow">
                         <div className="agenceImageBW antoine">
-                            <img src={Antoine} />
+                            <img src={Antoine} alt="Antoine Prugne"/>
                         </div>
                         <div className="agenceImageColor antoine">
-                            <img src={AntoineColor} />
+                            <img src={AntoineColor} alt="Antoine Prugne"/>
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -116,10 +121,10 @@ export default function AgencePage() {
                 <div className="row">
                     <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
-                            <img src={Maxime} />
+                            <img src={Maxime} alt="Maxime Harquet"/>
                         </div>
                         <div className="agenceImageColor">
-                            <img src={MaximeColor} />
+                            <img src={MaximeColor} alt="Maxime Harquet"/>
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -138,10 +143,10 @@ export default function AgencePage() {
                     </div>
                     <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
-                            <img src={Julie} />
+                            <img src={Julie} alt="Julie Guillaume"/>
                         </div>
                         <div className="agenceImageColor">
-                            <img src={JulieColor} />
+                            <img src={JulieColor} alt="Julie Guillaume"/>
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -161,10 +166,10 @@ export default function AgencePage() {
                     </div>
                     <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
-                            <img src={Moha} />
+                            <img src={Moha} alt="Moha Arzhang"/>
                         </div>
                         <div className="agenceImageColor">
-                            <img src={MohaColor} />
+                            <img src={MohaColor} alt="Moha Arzhang"/>
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
