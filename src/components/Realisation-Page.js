@@ -1,25 +1,21 @@
 import NavigationMenu from "./NavigationMenu"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import RealisationTypeWriter from './RealisationTypeWriter'
 import Contact from "./Contact"
 import Clients from "./Clients"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import AllRealisations from "./AllRealisations"
-
+import SEO from './SEO'
 
 export default function RealisationPage() {
-
-    useEffect(() => {
-        document.title = "Réalisations - ALGEGO";  
-      }, []);
-
     AOS.init();
 
     const [showMenu, setShowMenu] = useState(false);
 
     return (
         <>
+            <SEO title='Réalisations - ALGEGO' description='Description for Realisation page' language='FR' link='https://algego.com/realisations' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>

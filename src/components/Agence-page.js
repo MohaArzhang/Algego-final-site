@@ -1,5 +1,5 @@
 import NavigationMenu from "./NavigationMenu"
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Envelope from '../images/envelope.png'
 import AlgegoCircle from '../images/circle.png'
 import Daniel from '../images/agence/Daniel.jpg'
@@ -12,16 +12,13 @@ import Julie from '../images/agence/Julie.jpg'
 import JulieColor from '../images/agence/Julie_color.jpg'
 import Moha from '../images/agence/Moha.jpg'
 import MohaColor from '../images/agence/Moha_color.jpg'
+import SEO from './SEO'
 
 export default function AgencePage() {
-
-    useEffect(() => {
-        document.title = "Agence - ALGEGO";  
-      }, []);
-
     const [showMenu, setShowMenu] = useState(false);
     return (
         <>
+            <SEO title='Agence - ALGEGO' description='Description for Agence page' language='FR' link='https://algego.com/agence' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>
@@ -73,10 +70,10 @@ export default function AgencePage() {
                 <div className="row">
                     <div className="col-xl-6 col-md-6 agenceImgRow agenceImgRowUp">
                         <div className="agenceImageBW daniel">
-                            <img src={Daniel} alt="Daniel Dõ"/>
+                            <img src={Daniel} alt="Daniel Dõ" />
                         </div>
                         <div className="agenceImageColor daniel">
-                            <img src={DanielColor} alt="Daniel Dõ"/>
+                            <img src={DanielColor} alt="Daniel Dõ" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -96,10 +93,10 @@ export default function AgencePage() {
                     </div>
                     <div className="col-xl-6 col-md-6 agenceImgRow">
                         <div className="agenceImageBW antoine">
-                            <img src={Antoine} alt="Antoine Prugne"/>
+                            <img src={Antoine} alt="Antoine Prugne" />
                         </div>
                         <div className="agenceImageColor antoine">
-                            <img src={AntoineColor} alt="Antoine Prugne"/>
+                            <img src={AntoineColor} alt="Antoine Prugne" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -121,10 +118,10 @@ export default function AgencePage() {
                 <div className="row">
                     <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
-                            <img src={Maxime} alt="Maxime Harquet"/>
+                            <img src={Maxime} alt="Maxime Harquet" />
                         </div>
                         <div className="agenceImageColor">
-                            <img src={MaximeColor} alt="Maxime Harquet"/>
+                            <img src={MaximeColor} alt="Maxime Harquet" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -143,10 +140,10 @@ export default function AgencePage() {
                     </div>
                     <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
-                            <img src={Julie} alt="Julie Guillaume"/>
+                            <img src={Julie} alt="Julie Guillaume" />
                         </div>
                         <div className="agenceImageColor">
-                            <img src={JulieColor} alt="Julie Guillaume"/>
+                            <img src={JulieColor} alt="Julie Guillaume" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">
@@ -166,10 +163,10 @@ export default function AgencePage() {
                     </div>
                     <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
-                            <img src={Moha} alt="Moha Arzhang"/>
+                            <img src={Moha} alt="Moha Arzhang" />
                         </div>
                         <div className="agenceImageColor">
-                            <img src={MohaColor} alt="Moha Arzhang"/>
+                            <img src={MohaColor} alt="Moha Arzhang" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
                                     <div className="agencePersonTitle">

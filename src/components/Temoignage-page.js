@@ -1,5 +1,5 @@
 import NavigationMenu from "./NavigationMenu"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import TemoignageTypeWriter from './TemoignageTypeWriter'
 import Desjardins from '../images/Logos/desjardins.png'
 import Enviro from '../images/Logos/enviro.png'
@@ -10,13 +10,9 @@ import Contact from "./Contact"
 import Clients from "./Clients"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import SEO from './SEO'
 
 export default function Temoignage() {
-
-    useEffect(() => {
-        document.title = "Témoignage - ALGEGO";  
-      }, []);
-
     AOS.init();
 
     const [showMenu, setShowMenu] = useState(false);
@@ -65,6 +61,7 @@ export default function Temoignage() {
 
     return (
         <>
+            <SEO title='Temoignages - ALGEGO' description='Description for Temoignage page' language='FR' link='https://algego.com/temoignage' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>
@@ -136,13 +133,13 @@ export default function Temoignage() {
                                 data-aos-once="true"
                                 className="col-lg-6">
                                 <div className="temoigangeResponsive">
-                                <div className="temoignageCard temoignageCardLeft">
+                                    <div className="temoignageCard temoignageCardLeft">
                                         <iframe src={link4} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title4}></iframe>
                                         <div className="temoigangeImage">
                                             <img src={CQF} alt={alt4}></img>
                                         </div>
                                         <div className="temoignageVideoSub">
-                                        {description4}
+                                            {description4}
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +151,7 @@ export default function Temoignage() {
                                 data-aos-once="true"
                                 className="col-lg-6">
                                 <div className="temoigangeResponsive">
-                                <div className="temoignageCard temoignageCardRight">
+                                    <div className="temoignageCard temoignageCardRight">
                                         <iframe src={link5} width="348" height="197" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title={title5}></iframe>
                                         <div className="temoigangeImage">
                                             <img src={BIXI} alt={alt5}></img>
