@@ -2,12 +2,15 @@ import Teaser from '../video/video_page_accueil_finale.mp4'
 import HeaderImage from '../images/contact-header-image.png'
 import UpTypeWriterMainHome from './UpTypeWriterMainHome'
 import UpTypeWriterOther from './UpTypeWriterOther'
+import { useLocation } from 'react-router-dom';
 
 export default function BackVideo() {
-  let TypeElement
-  if (window.pageName == 'MainHome') {
+  let TypeElement;
+  const location = useLocation();
+
+  if (location.pathname === '/') {
     TypeElement = <UpTypeWriterMainHome />
-  } else {
+  } else if (location.pathname === '/home') {
     TypeElement = <UpTypeWriterOther />
   }
   return (

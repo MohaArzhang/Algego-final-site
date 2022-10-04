@@ -8,9 +8,9 @@ function UpTypeWriterTwo() {
     <>
       <div className="upTypeWriter">
         <Typewriter
-          options={{
-            delay: 100,
-          }}
+          // options={{
+          //   delay: 100,
+          // }}
           onInit={(typewriter) => {
             typewriter
               .typeString("Partenaire de vos")

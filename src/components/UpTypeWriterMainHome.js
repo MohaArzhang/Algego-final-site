@@ -8,12 +8,12 @@ function UpTypeWriter() {
     <>
       <div className="upTypeWriter">
         <Typewriter
-          options={{
-            delay: 100,
-          }}
+          // options={{
+          //   delay: 100,
+          // }}
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(3000)
+              .pauseFor(2800)
               .typeString("Partenaire de vos")
               .pauseFor(200)
               .deleteChars(6)
