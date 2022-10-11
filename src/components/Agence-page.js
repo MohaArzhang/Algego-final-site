@@ -18,7 +18,7 @@ export default function AgencePage() {
     const [showMenu, setShowMenu] = useState(false);
     return (
         <>
-            <SEO title='Agence - ALGEGO' description='Description for Agence page' language='FR' link='https://algego.com/agence' />
+            <SEO title='Agence - ALGEGO' description='Découvrez notre équipe multidisciplinaire d’experts de haut niveau. Dans la Vie, il n’y a pas de hasards : il n’y a que des rendez-vous. À quand notre rendez-vous… avec vous ?' language='FR' link='https://algego.com/agence' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>

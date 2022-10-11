@@ -9,7 +9,7 @@ const ContactUs = () => {
     const [showMenu, setShowMenu] = useState(false);
     return (
         <>
-            <SEO title='Jasons ensemble - ALGEGO' description='Description for Contact Us page' language='FR' link='https://algego.com/contactus' />
+            <SEO title='Jasons ensemble - ALGEGO' description='Un projet de formation, de communication ou d’événementiel ? Jasons ensemble ! De l’idée à la diffusion, ALGEGO a la solution.' language='FR' link='https://algego.com/contactus' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>

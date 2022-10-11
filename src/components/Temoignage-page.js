@@ -61,7 +61,7 @@ export default function Temoignage() {
 
     return (
         <>
-            <SEO title='Temoignages - ALGEGO' description='Description for Temoignage page' language='FR' link='https://algego.com/temoignage' />
+            <SEO title='Ce que disent nos clients - ALGEGO' description='Découvrez ce que disent nos clients de ALGEGO… en trois mots, et visionnez quelques témoignages vidéo de clients heureux de nous compter comme partenaire.' language='FR' link='https://algego.com/temoignage' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>

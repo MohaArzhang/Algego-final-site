@@ -15,7 +15,7 @@ export default function RealisationPage() {
 
     return (
         <>
-            <SEO title='Réalisations - ALGEGO' description='Description for Realisation page' language='FR' link='https://algego.com/realisations' />
+            <SEO title='Réalisations - ALGEGO' description='Découvrez quelques-unes de nos réalisations en formation, en communication interne et externe, et en événementiel : des solutions innovantes sur mesure intégrant le multimédia.' language='FR' link='https://algego.com/realisations' />
             <div>
                 <NavigationMenu showMenu={showMenu} setShowMenu={setShowMenu} />
             </div>
