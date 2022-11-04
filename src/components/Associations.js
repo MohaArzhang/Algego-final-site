@@ -24,9 +24,9 @@ export default function Associations() {
                     <div className="clientWrapper">
                         <a href="https://rpfq.com/holo/authentification" target="_blank"><img className="associationImage" src={RPFQ} alt="RPFQ"></img></a>
                     </div>
-                    <div className="clientWrapper">
+                    {/* <div className="clientWrapper">
                         <a href="https://www.ccifcmtl.ca/" target="_blank"><img className="associationImage" src={SRC} alt="SRC"></img></a>
-                    </div>
+                    </div> */}
                     <div className="clientWrapper">
                         <a href="https://www.xnquebec.co" target="_blank"><img className="associationImage" src={XN} alt="XN"></img></a>
                     </div>
