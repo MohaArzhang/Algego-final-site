@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.65523586.css",
-    "main.js": "/static/js/main.b6f25c2d.js",
+    "main.js": "/static/js/main.24d9b1c1.js",
     "static/js/787.e60a8016.chunk.js": "/static/js/787.e60a8016.chunk.js",
     "static/media/video_page_accueil_finale.mp4": "/static/media/video_page_accueil_finale.d1b00ed97b7a0a50b727.mp4",
     "static/media/contact-header-image.png": "/static/media/contact-header-image.07b1712da84b73083fe4.png",
@@ -36,6 +36,7 @@
     "static/media/Moha_color.jpg": "/static/media/Moha_color.2ae3bf4502b5fbd13cbd.jpg",
     "static/media/barreau_realisation.jpg": "/static/media/barreau_realisation.9f6e7a95dd6e5f2d6d27.jpg",
     "static/media/amcq.png": "/static/media/amcq.5dfe040d360a1e0aec5a.png",
+    "static/media/floralies.png": "/static/media/floralies.0687fbc703ade02b17ed.png",
     "static/media/Antoine.jpg": "/static/media/Antoine.c6bdfc76bfd6d48305f5.jpg",
     "static/media/hema.png": "/static/media/hema.40a38656be2b3fad8046.png",
     "static/media/Moha.jpg": "/static/media/Moha.eca4c0f65c8457d85397.jpg",
@@ -56,7 +57,6 @@
     "static/media/logo-blanc.png": "/static/media/logo-blanc.68f26f19505b150607df.png",
     "static/media/circle.png": "/static/media/circle.f7b2ba525097e4c93d24.png",
     "static/media/giant.png": "/static/media/giant.cfe0d361818cf8cadd32.png",
-    "static/media/floralies.png": "/static/media/floralies.38ca087e1482cab5226c.png",
     "static/media/bell.png": "/static/media/bell.76d965c950124a4f8a55.png",
     "static/media/xn.png": "/static/media/xn.835484c4006856325ce3.png",
     "static/media/opdq.png": "/static/media/opdq.846ab794aad45d622796.png",
@@ -69,11 +69,11 @@
     "static/media/envelope.png": "/static/media/envelope.1b8b8b8176ba435eeac4.png",
     "index.html": "/index.html",
     "main.65523586.css.map": "/static/css/main.65523586.css.map",
-    "main.b6f25c2d.js.map": "/static/js/main.b6f25c2d.js.map",
+    "main.24d9b1c1.js.map": "/static/js/main.24d9b1c1.js.map",
     "787.e60a8016.chunk.js.map": "/static/js/787.e60a8016.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65523586.css",
-    "static/js/main.b6f25c2d.js"
+    "static/js/main.24d9b1c1.js"
   ]
 }
