@@ -1276,12 +1276,12 @@
   margin-top: -397px;
 }
 
-.daniel {
+.agenceLeftImage {
   margin-left: auto;
   margin-right: 25px;
 }
 
-.antoine {
+.agenceRightImage {
   margin-left: 25px;
   margin-right: auto;
 }
@@ -1919,11 +1919,11 @@ textarea {
     margin-top: -250px;
   }
 
-  .daniel {
+  .agenceLeftImage {
     margin-right: auto;
   }
 
-  .antoine {
+  .agenceRightImage {
     margin-left: auto;
   }
 

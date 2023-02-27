@@ -69,10 +69,10 @@ export default function AgencePage() {
             <div className="container-fluid agenceMainSection">
                 <div className="row">
                     <div className="col-xl-6 col-md-6 agenceImgRow agenceImgRowUp">
-                        <div className="agenceImageBW daniel">
+                        <div className="agenceImageBW agenceLeftImage">
                             <img src={Daniel} alt="Daniel Dõ" />
                         </div>
-                        <div className="agenceImageColor daniel">
+                        <div className="agenceImageColor agenceLeftImage">
                             <img src={DanielColor} alt="Daniel Dõ" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
@@ -92,10 +92,10 @@ export default function AgencePage() {
                         </div>
                     </div>
                     <div className="col-xl-6 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW antoine">
+                        <div className="agenceImageBW agenceRightImage">
                             <img src={Antoine} alt="Antoine Prugne" />
                         </div>
-                        <div className="agenceImageColor antoine">
+                        <div className="agenceImageColor agenceRightImage">
                             <img src={AntoineColor} alt="Antoine Prugne" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
@@ -116,7 +116,7 @@ export default function AgencePage() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xl-4 col-md-6 agenceImgRow">
+                    {/* <div className="col-xl-4 col-md-6 agenceImgRow">
                         <div className="agenceImageBW">
                             <img src={Maxime} alt="Maxime Harquet" />
                         </div>
@@ -137,12 +137,12 @@ export default function AgencePage() {
                                 <div className="agencePersonTag"><div>#les-mots-sans-les-maux</div></div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-xl-4 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW">
+                    </div> */}
+                    <div className="col-xl-6 col-md-6 agenceImgRow">
+                        <div className="agenceImageBW agenceLeftImage">
                             <img src={Julie} alt="Julie Guillaume" />
                         </div>
-                        <div className="agenceImageColor">
+                        <div className="agenceImageColor agenceLeftImage">
                             <img src={JulieColor} alt="Julie Guillaume" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
@@ -161,11 +161,11 @@ export default function AgencePage() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-4 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW">
+                    <div className="col-xl-6 col-md-6 agenceImgRow">
+                        <div className="agenceImageBW agenceRightImage">
                             <img src={Moha} alt="Moha Arzhang" />
                         </div>
-                        <div className="agenceImageColor">
+                        <div className="agenceImageColor agenceRightImage">
                             <img src={MohaColor} alt="Moha Arzhang" />
                             <div className="agencePersonTitleAndTag">
                                 <div className="agencePersonTitleWrapper">
