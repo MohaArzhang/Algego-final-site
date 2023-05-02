@@ -99,7 +99,4 @@ function Navigation(props) {
     )
 }
 
-console.log('this is page nav main');
-
-
 export default Navigation

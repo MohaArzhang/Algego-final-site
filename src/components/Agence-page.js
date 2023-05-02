@@ -1,21 +1,19 @@
 import NavigationMenu from "./NavigationMenu"
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react';
 import Envelope from '../images/envelope.png'
 import AlgegoCircle from '../images/circle.png'
-import Daniel from '../images/agence/Daniel.jpg'
-import DanielColor from '../images/agence/Daniel_color.jpg'
-import Antoine from '../images/agence/Antoine.jpg'
-import AntoineColor from '../images/agence/Antoine_color.jpg'
-import Maxime from '../images/agence/Maxime.jpg'
-import MaximeColor from '../images/agence/Maxime_color.jpg'
-import Julie from '../images/agence/Julie.jpg'
-import JulieColor from '../images/agence/Julie_color.jpg'
-import Moha from '../images/agence/Moha.jpg'
-import MohaColor from '../images/agence/Moha_color.jpg'
 import SEO from './SEO'
 
 export default function AgencePage() {
     const [showMenu, setShowMenu] = useState(false);
+    const [agents, setAgent] = useState([]);
+
+    useEffect(() => {
+        fetch('https://gestion.contenu.algego.com/wp-json/wp/v2/employe')
+            .then(response => response.json())
+            .then(data => setAgent(data))
+    }, [])
+
     return (
         <>
             <SEO title='Agence - ALGEGO' description='Découvrez notre équipe multidisciplinaire d’experts de haut niveau. Dans la Vie, il n’y a pas de hasards : il n’y a que des rendez-vous. À quand notre rendez-vous… avec vous ?' language='FR' link='https://algego.com/agence' />
@@ -54,11 +52,9 @@ export default function AgencePage() {
                 </div>
                 <div className="agenceTitle">
                     <h1>
-                        {/* LA VIE EST TROP COURTE POUR */}
                         La vie est trop courte
                     </h1>
                     <h1>
-                        {/* SE PRENDRE AU SÉRIEUX ! */}
                         pour se prendre au sérieux !
                     </h1>
                 </div>
@@ -68,121 +64,111 @@ export default function AgencePage() {
             </div>
             <div className="container-fluid agenceMainSection">
                 <div className="row">
-                    <div className="col-xl-6 col-md-6 agenceImgRow agenceImgRowUp">
-                        <div className="agenceImageBW agenceLeftImage">
-                            <img src={Daniel} alt="Daniel Dõ" />
-                        </div>
-                        <div className="agenceImageColor agenceLeftImage">
-                            <img src={DanielColor} alt="Daniel Dõ" />
-                            <div className="agencePersonTitleAndTag">
-                                <div className="agencePersonTitleWrapper">
-                                    <div className="agencePersonTitle">
-                                        <h3>daniel dõ</h3>
-                                        <p>président</p>
-                                        <p>chef de la création</p>
+                    {agents.map((agent, index) => {
+                        if (index < 2) {
+                            return (
+                                <div key={agent.id} className="col-xl-6 col-md-6 agenceImgRow agenceImgRowUp">
+                                    <div className={index === 0 ? "agenceImageBW agenceLeftImage" : "agenceImageBW agenceRightImage"}>
+                                        <img src={agent.acf.image_blanc_et_noir} alt={agent.acf.nom_de_employe} />
                                     </div>
-                                    <div className="agenceEnvelopeWrapper">
-                                        <a href="mailto:danieldo@algego.com">
-                                            <img src={Envelope} alt="Envelope" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="agencePersonTag"><div>#créateur-de-l’univers</div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-6 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW agenceRightImage">
-                            <img src={Antoine} alt="Antoine Prugne" />
-                        </div>
-                        <div className="agenceImageColor agenceRightImage">
-                            <img src={AntoineColor} alt="Antoine Prugne" />
-                            <div className="agencePersonTitleAndTag">
-                                <div className="agencePersonTitleWrapper">
-                                    <div className="agencePersonTitle">
-                                        <h3>antoine prugne</h3>
-                                        <p>coprésident</p>
-                                        <p>chef de la stratégie</p>
-                                    </div>
-                                    <div className="agenceEnvelopeWrapper">
-                                        <a href="mailto:antoineprugne@algego.com">
-                                            <img src={Envelope} alt="Envelope" />
-                                        </a>
+                                    <div className={index === 0 ? "agenceImageColor agenceLeftImage" : "agenceImageColor agenceRightImage"}>
+                                        <img src={agent.acf.image_en_couleur} alt={agent.acf.nom_de_employe} />
+                                        <div className="agencePersonTitleAndTag">
+                                            <div className="agencePersonTitleWrapper">
+                                                <div className="agencePersonTitle">
+                                                    <h3>{agent.acf.nom_de_employe}</h3>
+                                                    <p>{agent.acf.titre_de_employe_1}</p>
+                                                    <p>{agent.acf.titre_de_employe_2}</p>
+                                                </div>
+                                                <div className="agenceEnvelopeWrapper">
+                                                    {agent.acf.adresse_courriel == "" ? (
+                                                        <a href="/contactus">
+                                                            <img src={Envelope} alt="Envelope" />
+                                                        </a>
+                                                    ) : (
+                                                        <a href={`mailto:${agent.acf.adresse_courriel}`}>
+                                                            <img src={Envelope} alt="Envelope" />
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div className="agencePersonTag"><div>{agent.acf.hashtag}</div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="agencePersonTag"><div>#être-ou-ne-pas-être</div></div>
-                            </div>
-                        </div>
-                    </div>
+                            )
+                        }
+                    })}
                 </div>
                 <div className="row">
-                    {/* <div className="col-xl-4 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW">
-                            <img src={Maxime} alt="Maxime Harquet" />
-                        </div>
-                        <div className="agenceImageColor">
-                            <img src={MaximeColor} alt="Maxime Harquet" />
-                            <div className="agencePersonTitleAndTag">
-                                <div className="agencePersonTitleWrapper">
-                                    <div className="agencePersonTitle">
-                                        <h3>maxime harquet</h3>
-                                        <p>responsable des opérations</p>
+                    {agents.map((agent, index) => {
+                        if (agents.length === 3 && index === 2) {
+                            return (
+                                <div key={agent.id} className="col-xl-12 col-md-12 agenceImgRow">
+                                    <div className="agenceImageBW">
+                                        <img src={agent.acf.image_blanc_et_noir} alt={agent.acf.nom_de_employe} />
                                     </div>
-                                    <div className="agenceEnvelopeWrapper">
-                                        <a href="/contactus">
-                                            <img src={Envelope} alt="Envelope" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="agencePersonTag"><div>#les-mots-sans-les-maux</div></div>
-                            </div>
-                        </div>
-                    </div> */}
-                    <div className="col-xl-6 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW agenceLeftImage">
-                            <img src={Julie} alt="Julie Guillaume" />
-                        </div>
-                        <div className="agenceImageColor agenceLeftImage">
-                            <img src={JulieColor} alt="Julie Guillaume" />
-                            <div className="agencePersonTitleAndTag">
-                                <div className="agencePersonTitleWrapper">
-                                    <div className="agencePersonTitle">
-                                        <h3>julie guillaume</h3>
-                                        <p>responsable du développement</p>
-                                        <p>et des solutions innovantes</p>
-                                    </div>
-                                    <div className="agenceEnvelopeWrapper">
-                                        <a href="/contactus">
-                                            <img src={Envelope} alt="Envelope" />
-                                        </a>
+                                    <div className="agenceImageColor">
+                                        <img src={agent.acf.image_en_couleur} alt={agent.acf.nom_de_employe} />
+                                        <div className="agencePersonTitleAndTag">
+                                            <div className="agencePersonTitleWrapper">
+                                                <div className="agencePersonTitle">
+                                                    <h3>{agent.acf.nom_de_employe}</h3>
+                                                    <p>{agent.acf.titre_de_employe_1}</p>
+                                                    <p>{agent.acf.titre_de_employe_2}</p>
+                                                </div>
+                                                <div className="agenceEnvelopeWrapper">
+                                                    {agent.acf.adresse_courriel == "" ? (
+                                                        <a href="/contactus">
+                                                            <img src={Envelope} alt="Envelope" />
+                                                        </a>
+                                                    ) : (
+                                                        <a href={`mailto:${agent.acf.adresse_courriel}`}>
+                                                            <img src={Envelope} alt="Envelope" />
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div className="agencePersonTag"><div>{agent.acf.hashtag}</div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="agencePersonTag"><div>#visionnaire-en-un-clic</div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-6 col-md-6 agenceImgRow">
-                        <div className="agenceImageBW agenceRightImage">
-                            <img src={Moha} alt="Moha Arzhang" />
-                        </div>
-                        <div className="agenceImageColor agenceRightImage">
-                            <img src={MohaColor} alt="Moha Arzhang" />
-                            <div className="agencePersonTitleAndTag">
-                                <div className="agencePersonTitleWrapper">
-                                    <div className="agencePersonTitle">
-                                        <h3>moha arzhang</h3>
-                                        <p>webmestre</p>
+                            )
+                        }
+                        if (index >= 2) {
+                            return (
+                                <div key={agent.id} className="col-xl-6 col-md-6 agenceImgRow">
+                                    <div className={index === 2 ? "agenceImageBW agenceLeftImage" : "agenceImageBW agenceRightImage"}>
+                                        <img src={agent.acf.image_blanc_et_noir} alt={agent.acf.nom_de_employe} />
                                     </div>
-                                    <div className="agenceEnvelopeWrapper">
-                                        <a href="/contactus">
-                                            <img src={Envelope} alt="Envelope" />
-                                        </a>
+                                    <div className={index === 2 ? "agenceImageColor agenceLeftImage" : "agenceImageColor agenceRightImage"}>
+                                        <img src={agent.acf.image_en_couleur} alt={agent.acf.nom_de_employe} />
+                                        <div className="agencePersonTitleAndTag">
+                                            <div className="agencePersonTitleWrapper">
+                                                <div className="agencePersonTitle">
+                                                    <h3>{agent.acf.nom_de_employe}</h3>
+                                                    <p>{agent.acf.titre_de_employe_1}</p>
+                                                    <p>{agent.acf.titre_de_employe_2}</p>
+                                                </div>
+                                                <div className="agenceEnvelopeWrapper">
+                                                    {agent.acf.adresse_courriel == "" ? (
+                                                        <a href="/contactus">
+                                                            <img src={Envelope} alt="Envelope" />
+                                                        </a>
+                                                    ) : (
+                                                        <a href={`mailto:${agent.acf.adresse_courriel}`}>
+                                                            <img src={Envelope} alt="Envelope" />
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div className="agencePersonTag"><div>{agent.acf.hashtag}</div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="agencePersonTag"><div>#chapeau-les-codeurs</div></div>
-                            </div>
-                        </div>
-                    </div>
+                            )
+                        } 
+                    })}
                 </div>
             </div>
             <div className="agenceButtomSection">

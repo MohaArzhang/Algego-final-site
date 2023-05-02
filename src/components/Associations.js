@@ -3,7 +3,6 @@ import AQT from '../images/associations/aqt.png';
 import CQF from '../images/associations/cqf.png';
 import Manufacturier from '../images/associations/manufacturier.png';
 import RPFQ from '../images/associations/rpfq.png';
-import SRC from '../images/associations/src.png';
 import XN from '../images/associations/xn.png';
 
 export default function Associations() {
@@ -24,9 +23,6 @@ export default function Associations() {
                     <div className="clientWrapper">
                         <a href="https://rpfq.com/holo/authentification" target="_blank"><img className="associationImage" src={RPFQ} alt="RPFQ"></img></a>
                     </div>
-                    {/* <div className="clientWrapper">
-                        <a href="https://www.ccifcmtl.ca/" target="_blank"><img className="associationImage" src={SRC} alt="SRC"></img></a>
-                    </div> */}
                     <div className="clientWrapper">
                         <a href="https://www.xnquebec.co" target="_blank"><img className="associationImage" src={XN} alt="XN"></img></a>
                     </div>

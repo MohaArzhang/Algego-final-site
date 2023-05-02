@@ -71,6 +71,5 @@ function NavigationMenu(props) {
 
     )
 }
-console.log('this is page nav menu');
 
 export default NavigationMenu
