@@ -1242,3 +1242,10 @@ FileETag None
   AddHandler application/x-httpd-ea-php72___lsphp .php .php7 .phtml
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
+
+Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com cdnjs.cloudflare.com cdn.jsdelivr.net unpkg.com player.vimeo.com i.vimeocdn.com dj5ag5n6bpdxo.cloudfront.net api.emailjs.com data: https://www.googletagmanager.com;"
+
+
+Header set Content-Security-Policy: default-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com cdnjs.cloudflare.com cdn.jsdelivr.net unpkg.com player.vimeo.com i.vimeocdn.com dj5ag5n6bpdxo.cloudfront.net api.emailjs.com data: https://www.googletagmanager.com; connect-src 'self' gestion.contenu.algego.com;
+
+Header set Content-Security-Policy: connect-src 'self' gestion.contenu.algego.com;

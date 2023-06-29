@@ -4,7 +4,9 @@ import { IconButton, Toolbar } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import Slide from '@mui/material/Slide'
 import DialogComp from './DialogComp'
-import RealisationComp from './RealisationComp'
+// import RealisationComp from './RealisationComp'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -12,6 +14,24 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function AllRealisations() {
 
+    const RealisationComp = (props) => {
+        return (
+            <>
+                <div>
+                    <img className='realisationPageImage' src={props.imageLink} alt={props.client}></img>
+                </div>
+                <div className='realisationPageText'>
+                    <div className='realisationPageDes'>{props.category}</div>
+                    <div className='realisationClient'>{props.client}</div>
+                    <button onClick={props.openDialogFunc} className='btn btn-danger submitBtn decouvrirBtn'>
+                        Découvrir
+                    </button>
+                </div>
+            </>
+        )
+    }
+
+    AOS.init();
     const [realisations, setRealisations] = useState([])
     useEffect(() => {
         fetch('https://gestion.contenu.algego.com/wp-json/wp/v2/realisation?per_page=100')
@@ -51,40 +71,41 @@ export default function AllRealisations() {
                                     />
                                 </div>
                             </div>
-                            <Dialog
-                                open={open}
-                                onClose={handleClose}
-                                TransitionComponent={Transition}
-                                transitionDuration={800}
-                            >
-                                <Toolbar>
-                                    <IconButton
-                                        edge="start"
-                                        color="inherit"
-                                        onClick={handleClose}
-                                        aria-label="close">
-                                        <CloseIcon />
-                                    </IconButton>
-                                </Toolbar>
-                                {selectedReal &&
-                                    <DialogComp category={selectedReal.acf.realisation_categorie}
-                                        client={selectedReal.acf.realisation_client}
-                                        mandat={selectedReal.acf.texte_de_dialog.mandat}
-                                        defi={selectedReal.acf.texte_de_dialog.defi}
-                                        solutions={selectedReal.acf.texte_de_dialog.solutions}
-                                        type={selectedReal.acf.media_de_dialog_box.selectionner_le_type_de_media}
-                                        videoLink={selectedReal.acf.media_de_dialog_box.lien_video}
-                                        imageLink={selectedReal.acf.media_de_dialog_box.lien_image}
-                                        iframeVideo={selectedReal.acf.media_de_dialog_box.iframe_video}
-                                    />
-                                }
-                            </Dialog>
+
                         </>
                     )
                 }
                 )
                 }
             </div >
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+                transitionDuration={800}
+            >
+                <Toolbar>
+                    <IconButton
+                        edge="start"
+                        color="inherit"
+                        onClick={handleClose}
+                        aria-label="close">
+                        <CloseIcon />
+                    </IconButton>
+                </Toolbar>
+                {selectedReal &&
+                    <DialogComp category={selectedReal.acf.realisation_categorie}
+                        client={selectedReal.acf.realisation_client}
+                        mandat={selectedReal.acf.texte_de_dialog.mandat}
+                        defi={selectedReal.acf.texte_de_dialog.defi}
+                        solutions={selectedReal.acf.texte_de_dialog.solutions}
+                        type={selectedReal.acf.media_de_dialog_box.selectionner_le_type_de_media}
+                        videoLink={selectedReal.acf.media_de_dialog_box.lien_video}
+                        imageLink={selectedReal.acf.media_de_dialog_box.lien_image}
+                        iframeVideo={selectedReal.acf.media_de_dialog_box.iframe_video}
+                    />
+                }
+            </Dialog>
         </>
     )
 }
