@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from 'react'
 import Typewriter from "typewriter-effect"
 import Play from "../images/play.png"
+import Dialog from '@mui/material/Dialog'
+import { IconButton, Toolbar } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close'
+import Slide from '@mui/material/Slide'
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 function UpTypeWriterTwo() {
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
       <div className="upTypeWriter">
@@ -21,8 +35,36 @@ function UpTypeWriterTwo() {
               .start();
           }}
         />
-        <div className="firstButton"><a href="/Temoignage">Ce que disent nos clients<img src={Play} alt='Play icon'></img></a></div>
+        <div className="firstButton" onClick={handleClickOpen}>
+          ALGEGO en 60 secondes
+          <img src={Play} alt='Play icon'></img>
+        </div>
+        <div className="firstButton">
+          <a href="/Temoignage">Ce que disent nos clients
+            <img src={Play} alt='Play icon'></img>
+          </a>
+        </div>
       </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+        transitionDuration={1000}
+      // fullScreen={true}
+      >
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            onClick={handleClose}
+            aria-label="close">
+            <CloseIcon />
+          </IconButton>
+        </Toolbar>
+        <div className='video60Secondes'>
+          <iframe src="https://player.vimeo.com/video/840513688?h=c77086c6b2" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </Dialog>
     </>
   );
 }

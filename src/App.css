@@ -357,6 +357,12 @@
   margin-bottom: 4px;
 }
 
+.video60Secondes iframe {
+  width: 600px;
+  height: 600px;
+  margin-bottom: -6px;
+}
+
 .upTypeWriterContainer {
   display: flex;
   justify-content: center;
@@ -2271,6 +2277,14 @@ textarea {
   .agenceSubTitle {
     font-size: 1.5rem;
   }
+
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    margin: 0 !important;
+  }
+
+  .video60Secondes iframe {
+    width: 95vw;
+  }
 }
 
 @media only screen and (max-width:650px) {
@@ -2311,7 +2325,6 @@ textarea {
     width: 18px;
   }
 }
-
 
 @media only screen and (max-width:600px) {
 
